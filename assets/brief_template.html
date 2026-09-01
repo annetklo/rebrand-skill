@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<!--
+  CREATIVE-BRIEF TEMPLATE (Fase 0 van /rebrand)
+  Fill every {{PLACEHOLDER}} below. The page renders correctly with placeholders
+  still visible, so you can open it half-filled without breaking the layout.
+
+  PLACEHOLDERS (in order of appearance):
+    {{MERKNAAM}}                       Brand name, e.g. "Mission Relearn"
+    {{DATUM}}                          Date of the brief, e.g. "31 augustus 2026"
+    {{OPGESTELD_DOOR}}                 Who compiled it, e.g. "Claude + the brand owner"
+    {{AANLEIDING}}                     1-3 sentences: why a rebrand, why now
+    {{AMBITIE}}                        1-3 sentences: what the new brand must achieve
+    {{SCOPE_EVOLUTIE_CLASS}}           "chosen" if evolutie was picked, otherwise leave EMPTY
+    {{SCOPE_REVOLUTIE_CLASS}}          "chosen" if revolutie was picked, otherwise leave EMPTY
+    {{SCOPE_TOELICHTING}}              Why this scope was chosen, in the client's own words
+    {{ARCHITECTUUR_MODEL}}             One of: "Branded house" / "House of brands" / "Endorsed brands" / "Hybride"
+    {{MERKARCHITECTUUR}}               How this brand relates to sibling brands (e.g. a parent brand next to a product brand), 2-4 sentences
+    {{DOELGROEP_1_NAAM}} {{DOELGROEP_2_NAAM}} {{DOELGROEP_3_NAAM}}          Audience names
+    {{DOELGROEP_1_CONTEXT}} {{DOELGROEP_2_CONTEXT}} {{DOELGROEP_3_CONTEXT}} One sentence each: where they meet the brand
+    {{NIET_DOELGROEP_1}} {{NIET_DOELGROEP_2}} {{NIET_DOELGROEP_3}}          Who the brand deliberately does not serve (discovery 2.2), one short line each
+    {{ONLINESS_STATEMENT}}             The completed onliness sentence from discovery 2.4, one full sentence: "Wij zijn de enige ___ die ___"
+    {{DRIE_SECONDEN_GEVOEL}}           What someone must feel in the first 3 seconds, one sentence, quotable
+    {{NOOIT_GEVOEL}}                   What that same person may never feel (the never-feeling from discovery 2.3), one to three words
+    {{SLIDER_S1_GEWENST_PCT}} .. {{SLIDER_S7_GEWENST_PCT}}         Desired position per slider, number 0-100 (0 = left pole, 100 = right pole)
+    {{SLIDER_S1_HUIDIG_PCT}} .. {{SLIDER_S7_HUIDIG_PCT}}           Current position per slider (discovery 2.5); no gap = same number as gewenst
+    {{SLIDER_S1_CONCURRENT_PCT}} .. {{SLIDER_S7_CONCURRENT_PCT}}   Main competitor's position per slider (discovery 2.6)
+    {{SLIDER_S1_GAP}} .. {{SLIDER_S7_GAP}}   One gap sentence per slider: "Het merk moet van [huidig] naar [gewenst]; voor vorm/kleur/taal betekent dat ...". A slider without gap gets the single word "Behouden."
+      The seven axes, fixed order and poles (0 = left, 100 = right):
+      S1 Speels/Gezaghebbend · S2 Warm/Technisch · S3 Pionier/Betrouwbaar · S4 Toegankelijk/Exclusief
+      S5 Uitgesproken/Ingetogen · S6 Minimalistisch/Rijk aan detail · S7 Eigenzinnig/Mainstream
+    {{PERSOONLIJKHEID_TOELICHTING}}    1-2 sentences interpreting the seven positions together
+    {{BEWONDERD_1_MERK}} {{BEWONDERD_1_WAAROM}}   Admired brand + why (repeat for 2 and 3)
+    {{BEWONDERD_2_MERK}} {{BEWONDERD_2_WAAROM}}
+    {{BEWONDERD_3_MERK}} {{BEWONDERD_3_WAAROM}}
+    {{ANTI_1_MERK}} {{ANTI_1_WAAROM}}             Anti-reference + why (repeat for 2 and 3)
+    {{ANTI_2_MERK}} {{ANTI_2_WAAROM}}
+    {{ANTI_3_MERK}} {{ANTI_3_WAAROM}}
+    {{BEELDMERK_RICHTING}}             Chosen direction for the mark, 2-4 sentences, name the pattern (negatieve ruimte, dot-progressie, open baan, ...)
+    {{VORM_KERNWOORD_1}} {{VORM_KERNWOORD_2}} {{VORM_KERNWOORD_3}}  Three form-language keywords, e.g. "geometrisch", "een gewicht", "asymmetrie"
+    {{WOORDMERK_RICHTING}}             Chosen wordmark treatment, 1-3 sentences
+    {{KLEUR_1_HEX}} {{KLEUR_1_NAAM}} {{KLEUR_1_ROL}}   Colour direction swatch 1 (hex like #F36E59, name, role)
+    {{KLEUR_2_HEX}} {{KLEUR_2_NAAM}} {{KLEUR_2_ROL}}
+    {{KLEUR_3_HEX}} {{KLEUR_3_NAAM}} {{KLEUR_3_ROL}}
+    {{TOEPASSING_1}} ... {{TOEPASSING_5}}   The five applications the brand must excel in first, most important first
+    {{BEHOUD_1}} {{BEHOUD_2}} {{BEHOUD_3}}  Three things that may never get lost in the rebrand
+    {{DO_1}} .. {{DO_4}}               Do's: checkable design rules distilled from the discovery guardrails, each testable with ja/nee
+    {{DONT_1}} .. {{DONT_4}}           Don'ts: the negative twins (forbidden shapes, colours, tones), equally checkable
+    {{OPEN_VRAAG_1}} .. {{OPEN_VRAAG_3}}    Unresolved contradictions, a failed onliness test, parked points. Anything the discovery did not settle goes here, never smoothed into the body text
+    {{AKKOORD_BESLUIT}}                The literal decision, e.g. "Akkoord op deze brief, start fase 1"
+    {{AKKOORD_NAAM}}                   Who approves: the decision-owner from fase 0
+    {{AKKOORD_DATUM}}                  Approval date
+
+  Notes for the filler:
+  - Slider percentages: an unfilled slider falls back to the 50% midpoint, the layout never breaks.
+  - Colour swatches: an unfilled hex renders as a neutral dashed swatch, the layout never breaks.
+  - Fewer than 4 do's/don'ts or fewer than 3 open vragen: delete the unused elements instead of leaving
+    raw placeholders. Zero open vragen is rare; then write one card explaining why there are none,
+    do not delete the section.
+  - The filled brief always ships with the verbatim discovery log as appendix: keep discovery_log.md
+    next to this file in the project folder; the footer references it.
+  - This template carries the full 12-section brief from references/discovery_questions.md. If the
+    discovery surfaces content with no slot here (e.g. candidate 2x2 axes from 2.10, the five words
+    and five forbidden words from 2.12), append it as an extra card inside the matching numbered
+    section, in the same card/section design language, rather than dropping it.
+  - Never use the em-dash character anywhere in filled text. Use a comma or colon.
+-->
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creative brief · {{MERKNAAM}}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --coral: #F36E59;
+    --ink: #231F20;
+    --paper: #FAF8F6;
+    --line: #E8E2DD;
+    --muted: #5a5556;
+    --faint: #8a8485;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Open Sans', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 { font-family: 'Poppins', sans-serif; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 56px 32px 96px; }
+
+  header .kicker {
+    color: var(--coral); font-weight: 700; letter-spacing: .12em;
+    text-transform: uppercase; font-size: 12px;
+  }
+  header h1 { font-size: 40px; margin: 8px 0 12px; }
+  header p.lead { max-width: 640px; color: var(--muted); font-size: 15px; line-height: 1.6; }
+  header .meta-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+  header .meta-row span {
+    font-size: 12px; font-weight: 600; color: var(--faint);
+    background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 5px 14px;
+  }
+
+  section { margin-top: 56px; }
+  section > .num {
+    color: var(--coral); font-weight: 700; font-size: 12px; letter-spacing: .08em;
+    font-family: 'Poppins', sans-serif;
+  }
+  section > h2 { font-size: 26px; margin: 4px 0 6px; }
+  section > p.intro { color: var(--muted); font-size: 14px; line-height: 1.6; max-width: 640px; margin-bottom: 20px; }
+
+  .card {
+    background: #fff; border: 1px solid var(--line); border-radius: 18px;
+    padding: 26px 30px;
+  }
+  .card p { font-size: 14.5px; line-height: 1.65; color: var(--ink); }
+  .card p + p { margin-top: 12px; }
+  .card .label {
+    font-size: 11px; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--faint); font-weight: 700; margin-bottom: 6px;
+  }
+  .stack > .card + .card { margin-top: 16px; }
+
+  /* Scope: evolutie of revolutie */
+  .scope-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+  .scope-option {
+    background: #fff; border: 1px solid var(--line); border-radius: 18px;
+    padding: 26px 30px; position: relative;
+  }
+  .scope-option h3 { font-size: 19px; margin-bottom: 8px; }
+  .scope-option p { font-size: 13.5px; line-height: 1.6; color: var(--muted); }
+  .scope-option .badge {
+    display: none; position: absolute; top: 18px; right: 18px;
+    font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+    color: #fff; background: var(--coral); border-radius: 999px; padding: 4px 12px;
+  }
+  .scope-option.chosen { border-color: var(--coral); box-shadow: 0 0 0 2px var(--coral) inset; }
+  .scope-option.chosen .badge { display: inline-block; }
+  .scope-note { margin-top: 16px; }
+
+  /* Merkarchitectuur */
+  .model-pill {
+    display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .06em;
+    text-transform: uppercase; color: var(--coral);
+    background: var(--paper); border: 1px solid var(--line); border-radius: 999px;
+    padding: 5px 14px; margin-bottom: 12px;
+  }
+
+  /* Positionering */
+  .audience-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 16px; }
+  .audience { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+  .audience h3 { font-size: 15px; margin-bottom: 6px; }
+  .audience p { font-size: 13px; line-height: 1.55; color: var(--muted); }
+  .feel {
+    background: var(--ink); color: #fff; border-radius: 18px; padding: 30px 34px;
+  }
+  .feel .label { color: rgba(255,255,255,.55); }
+  .feel blockquote {
+    font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 22px; line-height: 1.4;
+  }
+  .feel blockquote::before { content: "\201C"; color: var(--coral); }
+  .feel blockquote::after { content: "\201D"; color: var(--coral); }
+  .feel .never {
+    margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.18);
+    font-size: 14.5px; color: rgba(255,255,255,.88);
+  }
+  .feel .never b {
+    color: var(--coral); font-size: 11px; font-weight: 700;
+    letter-spacing: .1em; text-transform: uppercase; margin-right: 10px;
+  }
+
+  /* Niet-doelgroep + onliness */
+  .notfor { list-style: none; }
+  .notfor li {
+    font-size: 13.5px; line-height: 1.6; color: var(--muted);
+    padding: 9px 0; border-top: 1px solid var(--line);
+  }
+  .notfor li:first-child { border-top: none; padding-top: 0; }
+  .notfor li::before { content: "\2715"; color: var(--coral); font-weight: 700; font-size: 11px; margin-right: 10px; }
+  .onliness { border-left: 4px solid var(--coral); }
+  .onliness p.statement {
+    font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 19px; line-height: 1.45;
+  }
+
+  /* Persoonlijkheid: sliders */
+  .slider-row { margin-bottom: 26px; }
+  .slider-row:last-of-type { margin-bottom: 0; }
+  .slider-labels { display: flex; justify-content: space-between; margin-bottom: 10px; }
+  .slider-labels b { font-size: 13.5px; font-weight: 700; }
+  .slider-track {
+    position: relative; height: 6px; border-radius: 999px;
+    background: linear-gradient(90deg, var(--line), var(--line));
+  }
+  .slider-track .marker {
+    position: absolute; top: 50%; left: 50%;
+    width: 20px; height: 20px; border-radius: 50%;
+    background: var(--coral); border: 3px solid #fff;
+    box-shadow: 0 2px 8px rgba(35,31,32,.25);
+    transform: translate(-50%, -50%);
+  }
+  .slider-track .tick {
+    position: absolute; top: 50%; width: 1px; height: 12px;
+    background: var(--line); transform: translateY(-50%);
+  }
+  .slider-value { margin-top: 8px; font-size: 11.5px; color: var(--faint); }
+  .slider-track .marker.huidig {
+    background: #fff; border: 3px solid var(--ink);
+    width: 16px; height: 16px; box-shadow: none;
+  }
+  .slider-track .marker.concurrent {
+    background: var(--faint); border: none; border-radius: 3px;
+    width: 11px; height: 11px; box-shadow: none;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .slider-legend {
+    display: flex; flex-wrap: wrap; gap: 20px; align-items: center;
+    margin-bottom: 24px; font-size: 12px; color: var(--muted);
+  }
+  .slider-legend i {
+    display: inline-block; font-style: normal; margin-right: 7px; vertical-align: -2px;
+  }
+  .slider-legend .l-gewenst { width: 13px; height: 13px; border-radius: 50%; background: var(--coral); border: 2px solid #fff; box-shadow: 0 1px 4px rgba(35,31,32,.25); }
+  .slider-legend .l-huidig { width: 10px; height: 10px; border-radius: 50%; background: #fff; border: 3px solid var(--ink); }
+  .slider-legend .l-concurrent { width: 9px; height: 9px; border-radius: 3px; background: var(--faint); transform: rotate(45deg); }
+  .slider-gap {
+    margin-top: 8px; font-size: 12.5px; line-height: 1.55; color: var(--ink);
+    background: var(--paper); border-left: 3px solid var(--coral);
+    border-radius: 0 8px 8px 0; padding: 8px 14px;
+  }
+
+  /* Referenties */
+  .ref-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+  .ref-col { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 24px 28px; }
+  .ref-col h3 { font-size: 16px; margin-bottom: 14px; }
+  .ref-col.anti h3 { color: var(--coral); }
+  .ref-item { padding: 12px 0; border-top: 1px solid var(--line); }
+  .ref-item:first-of-type { border-top: none; padding-top: 0; }
+  .ref-item b { font-size: 14px; display: block; margin-bottom: 2px; }
+  .ref-item span { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+  /* Vormtaal-kernwoorden */
+  .keyword-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+  .keyword-row span {
+    font-size: 12px; font-weight: 700; letter-spacing: .04em;
+    background: var(--paper); border: 1px solid var(--line); border-radius: 999px; padding: 6px 16px;
+  }
+
+  /* Kleur-richting */
+  .swatch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 16px; }
+  .swatch { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: #fff; }
+  .swatch .chip {
+    height: 84px;
+    background: repeating-linear-gradient(45deg, var(--paper), var(--paper) 8px, #f1ece7 8px, #f1ece7 16px);
+    border-bottom: 1px solid var(--line);
+  }
+  .swatch .info { padding: 12px 16px; }
+  .swatch .info b { font-size: 13.5px; display: block; }
+  .swatch .info code { font-size: 11.5px; color: var(--faint); }
+  .swatch .info em { display: block; font-style: normal; font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+  /* Top-5 toepassingen */
+  .apps { counter-reset: app; }
+  .apps li {
+    list-style: none; counter-increment: app;
+    display: flex; align-items: baseline; gap: 16px;
+    background: #fff; border: 1px solid var(--line); border-radius: 14px;
+    padding: 16px 22px; margin-bottom: 10px; font-size: 14.5px;
+  }
+  .apps li::before {
+    content: counter(app, decimal-leading-zero);
+    font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 13px;
+    color: var(--coral); flex: none;
+  }
+
+  /* Wat nooit verloren mag gaan */
+  .anchor-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .anchor {
+    background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--coral);
+    border-radius: 14px; padding: 20px 22px; font-size: 14px; line-height: 1.6;
+  }
+
+  /* Open vragen & risico's */
+  .card.risk { border-left: 4px solid var(--ink); font-size: 14px; line-height: 1.6; }
+
+  /* Akkoord */
+  .approve {
+    background: #fff; border: 2px solid var(--ink); border-radius: 18px; padding: 30px 34px;
+    display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-end; justify-content: space-between;
+  }
+  .approve .decision { max-width: 560px; }
+  .approve .decision p { font-size: 15px; line-height: 1.6; font-weight: 600; }
+  .approve .sign { font-size: 13px; color: var(--muted); line-height: 1.9; }
+  .approve .sign b { color: var(--ink); }
+
+  footer { margin-top: 64px; font-size: 12.5px; color: var(--faint); line-height: 1.7; }
+  footer code { background: #fff; border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px; font-size: 11.5px; }
+
+  @media (max-width: 640px) {
+    header h1 { font-size: 30px; }
+    .wrap { padding: 40px 20px 72px; }
+    .feel blockquote { font-size: 18px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="kicker">{{MERKNAAM}} · Rebrand · Fase 0</div>
+    <h1>Creative brief</h1>
+    <p class="lead">Dit document legt de creatieve koers vast voordat er ook maar een schets wordt gemaakt. Alles wat in fase 1 tot en met 5 wordt ontworpen, wordt hieraan getoetst. Wijzigt een antwoord hieronder, dan wijzigt de brief eerst en het ontwerp daarna.</p>
+    <div class="meta-row">
+      <span>Datum: {{DATUM}}</span>
+      <span>Opgesteld door: {{OPGESTELD_DOOR}}</span>
+      <span>Status: concept tot akkoord onderaan</span>
+    </div>
+  </header>
+
+  <section>
+    <div class="num">01</div>
+    <h2>Aanleiding &amp; ambitie</h2>
+    <p class="intro">Waarom nu, en wat moet het nieuwe merk kunnen dat het huidige niet kan.</p>
+    <div class="stack">
+      <div class="card">
+        <div class="label">Aanleiding</div>
+        <p>{{AANLEIDING}}</p>
+      </div>
+      <div class="card">
+        <div class="label">Ambitie</div>
+        <p>{{AMBITIE}}</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="num">02</div>
+    <h2>Scope-besluit</h2>
+    <p class="intro">De belangrijkste keuze van het hele traject: verfijnen we wat er is, of beginnen we opnieuw? Elk later ontwerpbesluit volgt uit dit antwoord.</p>
+    <div class="scope-grid">
+      <div class="scope-option {{SCOPE_EVOLUTIE_CLASS}}">
+        <span class="badge">Gekozen</span>
+        <h3>Evolutie</h3>
+        <p>Het bestaande merkteken en woordmerk verfijnen. Zelfde merk-DNA, strakker en consequenter uitgevoerd. Herkenbaarheid blijft volledig intact; bestaande klanten zien een volwassener versie van hetzelfde merk.</p>
+      </div>
+      <div class="scope-option {{SCOPE_REVOLUTIE_CLASS}}">
+        <span class="badge">Gekozen</span>
+        <h3>Revolutie</h3>
+        <p>Een nieuw teken en een nieuwe visuele taal. Het merk-DNA wordt opnieuw vertaald in plaats van bijgeschaafd. Grotere sprong, groter risico, en de enige route als de huidige identiteit het verhaal niet meer kan dragen.</p>
+      </div>
+    </div>
+    <div class="card scope-note">
+      <div class="label">Waarom deze keuze</div>
+      <p>{{SCOPE_TOELICHTING}}</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="num">03</div>
+    <h2>Merkarchitectuur</h2>
+    <p class="intro">Hoe dit merk zich verhoudt tot de andere merken in het portfolio, zodat het nieuwe ontwerp de juiste afstand of verwantschap krijgt.</p>
+    <div class="card">
+      <span class="model-pill">{{ARCHITECTUUR_MODEL}}</span>
+      <p>{{MERKARCHITECTUUR}}</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="num">04</div>
+    <h2>Positionering</h2>
+    <p class="intro">Voor wie het merk werkt, voor wie uitdrukkelijk niet, de zin die alleen dit merk kan afmaken, en wat de doelgroep in de eerste drie seconden moet voelen: en nooit mag voelen.</p>
+    <div class="audience-grid">
+      <div class="audience">
+        <h3>{{DOELGROEP_1_NAAM}}</h3>
+        <p>{{DOELGROEP_1_CONTEXT}}</p>
+      </div>
+      <div class="audience">
+        <h3>{{DOELGROEP_2_NAAM}}</h3>
+        <p>{{DOELGROEP_2_CONTEXT}}</p>
+      </div>
+      <div class="audience">
+        <h3>{{DOELGROEP_3_NAAM}}</h3>
+        <p>{{DOELGROEP_3_CONTEXT}}</p>
+      </div>
+    </div>
+    <div class="card" style="margin-bottom:16px;">
+      <div class="label" style="color:var(--coral);">Niet-doelgroep</div>
+      <p>Voor wie dit merk bewust niet werkt. Een ontwerp dat deze groep aanspreekt, mist zijn doel:</p>
+      <ul class="notfor" style="margin-top:10px;">
+        <li>{{NIET_DOELGROEP_1}}</li>
+        <li>{{NIET_DOELGROEP_2}}</li>
+        <li>{{NIET_DOELGROEP_3}}</li>
+      </ul>
+    </div>
+    <div class="card onliness" style="margin-bottom:16px;">
+      <div class="label">Onliness-statement</div>
+      <p class="statement">{{ONLINESS_STATEMENT}}</p>
+      <p style="margin-top:10px; font-size:12.5px; color:var(--faint);">E&eacute;n zin, in de vorm "wij zijn de enige ___ die ___". Staat deze zin nog niet, dan hoort dat als risico in de sectie Open vragen &amp; risico's, en gaat positioneringswerk v&oacute;&oacute;r ontwerpwerk.</p>
+    </div>
+    <div class="feel">
+      <div class="label">Het 3-seconden-gevoel</div>
+      <blockquote>{{DRIE_SECONDEN_GEVOEL}}</blockquote>
+      <div class="never"><b>Nooit:</b>{{NOOIT_GEVOEL}}</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="num">05</div>
+    <h2>Persoonlijkheid</h2>
+    <p class="intro">Zeven assen, elk een spanning waar het merk positie op kiest. Per as staan drie posities: waar het merk moet komen (coral), waar het nu staat (open ring, vraag 2.5) en waar de belangrijkste concurrent staat (grijze ruit, vraag 2.6). Waar coral en ring uit elkaar liggen, ligt de ontwerpopdracht; die staat als zin onder de as. Valt coral samen met de ruit, dan is de positionering een me-too en moet fase 1 open ruimte vinden.</p>
+    <div class="card">
+      <div class="slider-legend">
+        <span><i class="l-gewenst"></i>Gewenst</span>
+        <span><i class="l-huidig"></i>Huidig</span>
+        <span><i class="l-concurrent"></i>Concurrent</span>
+      </div>
+      <div class="slider-row">
+        <div class="slider-labels"><b>Speels</b><b>Gezaghebbend</b></div>
+        <div class="slider-track">
+          <span class="tick" style="left:25%"></span>
+          <span class="tick" style="left:50%"></span>
+          <span class="tick" style="left:75%"></span>
+          <span class="marker concurrent" style="left:{{SLIDER_S1_CONCURRENT_PCT}}%"></span>
+          <span class="marker huidig" style="left:{{SLIDER_S1_HUIDIG_PCT}}%"></span>
+          <span class="marker" style="left:{{SLIDER_S1_GEWENST_PCT}}%"></span>
+        </div>
+        <div class="slider-value">Gewenst {{SLIDER_S1_GEWENST_PCT}} · Huidig {{SLIDER_S1_HUIDIG_PCT}} · Concurrent {{SLIDER_S1_CONCURRENT_PCT}} (0 = speels, 100 = gezaghebbend)</div>
+        <div class="slider-gap">{{SLIDER_S1_GAP}}</div>
+      </div>
+      <div class="slider-row">
+        <div class="slider-labels"><b>Warm</b><b>Technisch</b></div>
+        <div class="slider-track">
+          <span class="tick" style="left:25%"></span>
+          <span class="tick" style="left:50%"></span>
+          <span class="tick" style="left:75%"></span>
+          <span class="marker concurrent" style="left:{{SLIDER_S2_CONCURRENT_PCT}}%"></span>
+          <span class="marker huidig" style="left:{{SLIDER_S2_HUIDIG_PCT}}%"></span>
+          <span class="marker" style="left:{{SLIDER_S2_GEWENST_PCT}}%"></span>
+        </div>
+        <div class="slider-value">Gewenst {{SLIDER_S2_GEWENST_PCT}} · Huidig {{SLIDER_S2_HUIDIG_PCT}} · Concurrent {{SLIDER_S2_CONCURRENT_PCT}} (0 = warm, 100 = technisch)</div>
+        <div class="slider-gap">{{SLIDER_S2_GAP}}</div>
+      </div>
+      <div class="slider-row">
+        <div class="slider-labels"><b>Pionier</b><b>Betrouwbaar</b></div>
+        <div class="slider-track">
+          <span class="tick" style="left:25%"></span>
+          <span class="tick" style="left:50%"></span>
+          <span class="tick" style="left:75%"></span>
+          <span class="marker concurrent" style="left:{{SLIDER_S3_CONCURRENT_PCT}}%"></span>
+          <span class="marker huidig" style="left:{{SLIDER_S3_HUIDIG_PCT}}%"></span>
+          <span class="marker" style="left:{{SLIDER_S3_GEWENST_PCT}}%"></span>
+        </div>
+        <div class="slider-value">Gewenst {{SLIDER_S3_GEWENST_PCT}} · Huidig {{SLIDER_S3_HUIDIG_PCT}} · Concurrent {{SLIDER_S3_CONCURRENT_PCT}} (0 = pionier, 100 = betrouwbaar)</div>
+        <div class="slider-gap">{{SLIDER_S3_GAP}}</div>
+      </div>
+      <div class="slider-row">
+        <div class="slider-labels"><b>Toegankelijk</b><b>Exclusief</b></div>
+        <div class="slider-track">
+          <span class="tick" style="left:25%"></span>
+          <span class="tick" style="left:50%"></span>
+          <span class="tick" style="left:75%"></span>
+          <span class="marker concurrent" style="left:{{SLIDER_S4_CONCURRENT_PCT}}%"></span>
+          <span class="marker huidig" style="left:{{SLIDER_S4_HUIDIG_PCT}}%"></span>
+          <span class="marker" style="left:{{SLIDER_S4_GEWENST_PCT}}%"></span>
+        </div>
+        <div class="slider-value">Gewenst {{SLIDER_S4_GEWENST_PCT}} · Huidig {{SLIDER_S4_HUIDIG_PCT}} · Concurrent {{SLIDER_S4_CONCURRENT_PCT}} (0 = toegankelijk, 100 = exclusief)</div>
+        <div class="slider-gap">{{SLIDER_S4_GAP}}</div>
+      </div>
+      <div class="slider-row">
+        <div class="slider-labels"><b>Uitgesproken</b><b>Ingetogen</b></div>
+        <div class="slider-track">
+          <span class="tick" style="left:25%"></span>
+          <span class="tick" style="left:50%"></span>
+          <span class="tick" style="left:75%"></span>
+          <span class="marker concurrent" style="left:{{SLIDER_S5_CONCURRENT_PCT}}%"></span>
+          <span class="marker huidig" style="left:{{SLIDER_S5_HUIDIG_PCT}}%"></span>
+          <span class="marker" style="left:{{SLIDER_S5_GEWENST_PCT}}%"></span>
+        </div>
+        <div class="slider-value">Gewenst {{SLIDER_S5_GEWENST_PCT}} · Huidig {{SLIDER_S5_HUIDIG_PCT}} · Concurrent {{SLIDER_S5_CONCURRENT_PCT}} (0 = uitgesproken, 100 = ingetogen)</div>
+        <div class="slider-gap">{{SLIDER_S5_GAP}}</div>
+      </div>
+      <div class="slider-row">
+        <div class="slider-labels"><b>Minimalistisch</b><b>Rijk aan detail</b></div>
+        <div class="slider-track">
+          <span class="tick" style="left:25%"></span>
+          <span class="tick" style="left:50%"></span>
+          <span class="tick" style="left:75%"></span>
+          <span class="marker concurrent" style="left:{{SLIDER_S6_CONCURRENT_PCT}}%"></span>
+          <span class="marker huidig" style="left:{{SLIDER_S6_HUIDIG_PCT}}%"></span>
+          <span class="marker" style="left:{{SLIDER_S6_GEWENST_PCT}}%"></span>
+        </div>
+        <div class="slider-value">Gewenst {{SLIDER_S6_GEWENST_PCT}} · Huidig {{SLIDER_S6_HUIDIG_PCT}} · Concurrent {{SLIDER_S6_CONCURRENT_PCT}} (0 = minimalistisch, 100 = rijk aan detail)</div>
+        <div class="slider-gap">{{SLIDER_S6_GAP}}</div>
+      </div>
+      <div class="slider-row">
+        <div class="slider-labels"><b>Eigenzinnig</b><b>Mainstream</b></div>
+        <div class="slider-track">
+          <span class="tick" style="left:25%"></span>
+          <span class="tick" style="left:50%"></span>
+          <span class="tick" style="left:75%"></span>
+          <span class="marker concurrent" style="left:{{SLIDER_S7_CONCURRENT_PCT}}%"></span>
+          <span class="marker huidig" style="left:{{SLIDER_S7_HUIDIG_PCT}}%"></span>
+          <span class="marker" style="left:{{SLIDER_S7_GEWENST_PCT}}%"></span>
+        </div>
+        <div class="slider-value">Gewenst {{SLIDER_S7_GEWENST_PCT}} · Huidig {{SLIDER_S7_HUIDIG_PCT}} · Concurrent {{SLIDER_S7_CONCURRENT_PCT}} (0 = eigenzinnig, 100 = mainstream)</div>
+        <div class="slider-gap">{{SLIDER_S7_GAP}}</div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:16px;">
+      <div class="label">Wat dit samen betekent</div>
+      <p>{{PERSOONLIJKHEID_TOELICHTING}}</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="num">06</div>
+    <h2>Bewonderde merken &amp; anti-referenties</h2>
+    <p class="intro">Referenties zijn geen stijlen om te kopiëren maar ankers voor smaak: wat het merk mag lenen, en waar het expliciet van wegblijft.</p>
+    <div class="ref-grid">
+      <div class="ref-col">
+        <h3>Bewonderd, en waarom</h3>
+        <div class="ref-item"><b>{{BEWONDERD_1_MERK}}</b><span>{{BEWONDERD_1_WAAROM}}</span></div>
+        <div class="ref-item"><b>{{BEWONDERD_2_MERK}}</b><span>{{BEWONDERD_2_WAAROM}}</span></div>
+        <div class="ref-item"><b>{{BEWONDERD_3_MERK}}</b><span>{{BEWONDERD_3_WAAROM}}</span></div>
+      </div>
+      <div class="ref-col anti">
+        <h3>Nooit dit, en waarom niet</h3>
+        <div class="ref-item"><b>{{ANTI_1_MERK}}</b><span>{{ANTI_1_WAAROM}}</span></div>
+        <div class="ref-item"><b>{{ANTI_2_MERK}}</b><span>{{ANTI_2_WAAROM}}</span></div>
+        <div class="ref-item"><b>{{ANTI_3_MERK}}</b><span>{{ANTI_3_WAAROM}}</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="num">07</div>
+    <h2>Beeldmerk-richting</h2>
+    <p class="intro">De vormtaal waarbinnen fase 3 gaat ontwerpen. Richtingen buiten deze kaders komen alleen terug op tafel als deze brief eerst wordt herzien.</p>
+    <div class="card">
+      <p>{{BEELDMERK_RICHTING}}</p>
+      <div class="keyword-row">
+        <span>{{VORM_KERNWOORD_1}}</span>
+        <span>{{VORM_KERNWOORD_2}}</span>
+        <span>{{VORM_KERNWOORD_3}}</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="num">08</div>
+    <h2>Woordmerk &amp; kleur</h2>
+    <p class="intro">De behandeling van de naam zelf, en de kleurrichting waarbinnen het palet in fase 3 wordt uitgewerkt.</p>
+    <div class="card">
+      <div class="label">Woordmerk</div>
+      <p>{{WOORDMERK_RICHTING}}</p>
+    </div>
+    <div class="swatch-grid">
+      <div class="swatch">
+        <div class="chip" style="background:{{KLEUR_1_HEX}}"></div>
+        <div class="info"><b>{{KLEUR_1_NAAM}}</b><code>{{KLEUR_1_HEX}}</code><em>{{KLEUR_1_ROL}}</em></div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background:{{KLEUR_2_HEX}}"></div>
+        <div class="info"><b>{{KLEUR_2_NAAM}}</b><code>{{KLEUR_2_HEX}}</code><em>{{KLEUR_2_ROL}}</em></div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background:{{KLEUR_3_HEX}}"></div>
+        <div class="info"><b>{{KLEUR_3_NAAM}}</b><code>{{KLEUR_3_HEX}}</code><em>{{KLEUR_3_ROL}}</em></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="num">09</div>
+    <h2>Top-5 toepassingen</h2>
+    <p class="intro">De vijf plekken waar het merk het eerst en het hardst moet werken, in volgorde van belang. Elk ontwerp uit fase 3 wordt op nummer 1 en 2 getest voordat het op een reviewpagina komt.</p>
+    <ol class="apps">
+      <li>{{TOEPASSING_1}}</li>
+      <li>{{TOEPASSING_2}}</li>
+      <li>{{TOEPASSING_3}}</li>
+      <li>{{TOEPASSING_4}}</li>
+      <li>{{TOEPASSING_5}}</li>
+    </ol>
+  </section>
+
+  <section>
+    <div class="num">10</div>
+    <h2>Wat nooit verloren mag gaan</h2>
+    <p class="intro">De harde ondergrens. Een ontwerp dat een van deze drie ankers kwijtraakt, is per definitie afgekeurd, hoe mooi het ook is.</p>
+    <div class="anchor-grid">
+      <div class="anchor">{{BEHOUD_1}}</div>
+      <div class="anchor">{{BEHOUD_2}}</div>
+      <div class="anchor">{{BEHOUD_3}}</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="num">11</div>
+    <h2>Do's &amp; don'ts</h2>
+    <p class="intro">Alle guardrails uit de discovery, gedestilleerd tot regels waar je een ontwerp letterlijk langs legt. Elke regel is met ja of nee te toetsen; "voelt goed" telt niet als antwoord.</p>
+    <div class="ref-grid">
+      <div class="ref-col">
+        <h3>Do</h3>
+        <div class="ref-item"><span>{{DO_1}}</span></div>
+        <div class="ref-item"><span>{{DO_2}}</span></div>
+        <div class="ref-item"><span>{{DO_3}}</span></div>
+        <div class="ref-item"><span>{{DO_4}}</span></div>
+      </div>
+      <div class="ref-col anti">
+        <h3>Don't</h3>
+        <div class="ref-item"><span>{{DONT_1}}</span></div>
+        <div class="ref-item"><span>{{DONT_2}}</span></div>
+        <div class="ref-item"><span>{{DONT_3}}</span></div>
+        <div class="ref-item"><span>{{DONT_4}}</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="num">12</div>
+    <h2>Open vragen &amp; risico's</h2>
+    <p class="intro">Wat de discovery niet heeft opgelost, staat hier hardop: tegenstrijdige antwoorden, een onliness-zin die nog niet staat, geparkeerde punten. Niets hiervan wordt in de bodytekst gladgestreken; alles wat hier staat, komt bij de fase 3-gate opnieuw op tafel. Ook elke claim die niet naar een regel in het discovery-log herleidt, hoort hier en nergens anders.</p>
+    <div class="stack">
+      <div class="card risk">{{OPEN_VRAAG_1}}</div>
+      <div class="card risk">{{OPEN_VRAAG_2}}</div>
+      <div class="card risk">{{OPEN_VRAAG_3}}</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="num">13</div>
+    <h2>Akkoord</h2>
+    <p class="intro">Vanaf dit akkoord is de brief het toetskader. Latere twijfel gaat eerst terug naar de brief, niet rechtstreeks naar het ontwerp.</p>
+    <div class="approve">
+      <div class="decision">
+        <div class="label" style="font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--faint); font-weight:700; margin-bottom:6px;">Besluit</div>
+        <p>{{AKKOORD_BESLUIT}}</p>
+      </div>
+      <div class="sign">
+        Naam: <b>{{AKKOORD_NAAM}}</b><br>
+        Datum: <b>{{AKKOORD_DATUM}}</b>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Template: <code>brain/skills/rebrand/assets/brief_template.html</code> · gevuld aan het einde van fase 0 van het /rebrand-traject.<br>
+    Bijlage: het letterlijke discovery-log (<code>discovery_log.md</code>, zelfde projectmap) hoort onlosmakelijk bij deze brief. Elke claim hierboven herleidt naar een regel daarin.<br>
+    Wijzigingen na akkoord: nieuwe versie van dit bestand naast het origineel, nooit overschrijven.</p>
+  </footer>
+
+</div>
+</body>
+</html>

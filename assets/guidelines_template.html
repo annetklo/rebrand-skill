@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<!--
+  BRAND-GUIDELINES TEMPLATE (Fase 5 van /rebrand)
+  Lean guidelines: one page, eight sections, everything a designer or tool needs
+  to apply the brand correctly. Fill every {{PLACEHOLDER}} below. The page renders
+  correctly with placeholders still visible: unfilled images collapse into a
+  labeled slot instead of a broken-image icon, so a half-filled page never looks broken.
+
+  PLACEHOLDERS (in order of appearance):
+    {{MERKNAAM}}          Brand name, e.g. "Mission Relearn"
+    {{VERSIE_LABEL}}      Version label of this identity, e.g. "v2 (2026-09)"
+    {{DATUM}}             Publication date of these guidelines
+    {{HET_IDEE}}          THE one-sentence brand idea. One sentence, no comma splice, quotable.
+    {{LOGO_LICHT_SRC}}    Relative or absolute path to the primary logo for light backgrounds (SVG or PNG)
+    {{LOGO_DONKER_SRC}}   Path to the logo variant for dark backgrounds
+    {{LOGO_MONO_SRC}}     Path to the one-colour (mono) variant
+    {{CLEARSPACE_REGEL}}  The clear-space rule in words, e.g. "x = de hoogte van het beeldmerk; houd rondom minimaal 1x vrij"
+    {{MIN_PRINT_MM}}      Minimum logo width in print, number only, e.g. "12"
+    {{MIN_SCHERM_PX}}     Minimum logo width on screen, number only, e.g. "80"
+    {{MISUSE_1_SRC}} .. {{MISUSE_8_SRC}}   Paths to the eight real-mark misuse renders from the
+      Fase 4 misuse gallery (applications_stresstest.md step 4, stress-test misuse/ subfolder).
+      Same order as the table there: 1 uitrekken, 2 eigen kleur, 3 outline, 4 schaduw,
+      5 drukke achtergrond, 6 roteren, 7 watermerk, 8 oud-en-nieuw mengen.
+    {{KLEUR_1_NAAM}} {{KLEUR_1_HEX}} {{KLEUR_1_ROL}}   Colour token 1 (repeat for 2, 3, 4)
+    {{KLEUR_2_NAAM}} {{KLEUR_2_HEX}} {{KLEUR_2_ROL}}
+    {{KLEUR_3_NAAM}} {{KLEUR_3_HEX}} {{KLEUR_3_ROL}}
+    {{KLEUR_4_NAAM}} {{KLEUR_4_HEX}} {{KLEUR_4_ROL}}
+    {{CONTRAST_1_COMBINATIE}} {{CONTRAST_1_RATIO}} {{CONTRAST_1_WCAG}} {{CONTRAST_1_GEBRUIK}}   Contrast table row 1 (repeat for 2-4)
+      COMBINATIE e.g. "Ink op Paper", RATIO e.g. "13.4:1", WCAG e.g. "AAA" / "AA" / "alleen groot",
+      GEBRUIK e.g. "bodytekst". Compute real ratios (WCAG 2.2: 4.5:1 normale tekst, 3:1 grote tekst en UI).
+    {{CONTRAST_2_COMBINATIE}} {{CONTRAST_2_RATIO}} {{CONTRAST_2_WCAG}} {{CONTRAST_2_GEBRUIK}}
+    {{CONTRAST_3_COMBINATIE}} {{CONTRAST_3_RATIO}} {{CONTRAST_3_WCAG}} {{CONTRAST_3_GEBRUIK}}
+    {{CONTRAST_4_COMBINATIE}} {{CONTRAST_4_RATIO}} {{CONTRAST_4_WCAG}} {{CONTRAST_4_GEBRUIK}}
+    {{FONT_KOP}}          Heading typeface, e.g. "Cal Sans"
+    {{FONT_KOP_GEWICHTEN}}   Available/allowed weights, e.g. "600, 700"
+    {{FONT_BODY}}         Body typeface, e.g. "Open Sans"
+    {{FONT_BODY_GEWICHTEN}}  e.g. "400, 600, 700"
+    {{FONT_BRON}}         Where the fonts live, e.g. a Google Fonts URL or a local folder path
+    {{SCHAAL_H1}} {{SCHAAL_H2}} {{SCHAAL_H3}} {{SCHAAL_BODY}} {{SCHAAL_CAPTION}}   Type scale in px, numbers only
+    {{MOCKUP_1_SRC}} {{MOCKUP_1_LABEL}}   Application mockup image + caption (repeat for 2-4)
+    {{MOCKUP_2_SRC}} {{MOCKUP_2_LABEL}}
+    {{MOCKUP_3_SRC}} {{MOCKUP_3_LABEL}}
+    {{MOCKUP_4_SRC}} {{MOCKUP_4_LABEL}}
+    {{VERSIE_MAP_PAD}}    Absolute path to the version folder holding all assets, quoted if it contains spaces
+
+  Notes for the filler:
+  - Misuse: the eight cards mirror the Fase 4 misuse gallery one-to-one (applications_stresstest.md
+    step 4). Fill each {{MISUSE_n_SRC}} with the matching real-mark render from the stress-test
+    misuse/ folder; an unfilled card falls back to a generic proxy-shape SVG, so the page never
+    breaks. Keep the eight captions verbatim, keep the card order, never remove or reword a card.
+  - Colour chips: an unfilled hex renders as a neutral dashed chip, the layout never breaks.
+  - The type specimens render in Poppins/Open Sans as an approximation; the named brand fonts are leading.
+  - Never use the em-dash character anywhere in filled text. Use a comma or colon.
+-->
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brand guidelines · {{MERKNAAM}}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --coral: #F36E59;
+    --ink: #231F20;
+    --paper: #FAF8F6;
+    --line: #E8E2DD;
+    --muted: #5a5556;
+    --faint: #8a8485;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Open Sans', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 { font-family: 'Poppins', sans-serif; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 56px 32px 96px; }
+
+  header .kicker {
+    color: var(--coral); font-weight: 700; letter-spacing: .12em;
+    text-transform: uppercase; font-size: 12px;
+  }
+  header h1 { font-size: 40px; margin: 8px 0 12px; }
+  header .meta-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+  header .meta-row span {
+    font-size: 12px; font-weight: 600; color: var(--faint);
+    background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 5px 14px;
+  }
+
+  section { margin-top: 56px; }
+  section > .num {
+    color: var(--coral); font-weight: 700; font-size: 12px; letter-spacing: .08em;
+    font-family: 'Poppins', sans-serif;
+  }
+  section > h2 { font-size: 26px; margin: 4px 0 6px; }
+  section > p.intro { color: var(--muted); font-size: 14px; line-height: 1.6; max-width: 640px; margin-bottom: 20px; }
+
+  .card {
+    background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 26px 30px;
+  }
+
+  /* 1. Het idee */
+  .idea {
+    background: var(--ink); color: #fff; border-radius: 22px; padding: 56px 48px; text-align: center;
+  }
+  .idea p {
+    font-family: 'Poppins', sans-serif; font-weight: 600;
+    font-size: clamp(24px, 4.2vw, 40px); line-height: 1.25; max-width: 820px; margin: 0 auto;
+  }
+  .idea p b { color: var(--coral); font-weight: 600; }
+  .idea .sub { font-family: 'Open Sans', sans-serif; font-size: 13px; color: rgba(255,255,255,.55); margin-top: 18px; font-weight: 400; }
+
+  /* Image slots: unfilled {{...}} src collapses into a labeled slot, no broken-image icon */
+  .imgslot { position: relative; display: flex; align-items: center; justify-content: center; }
+  .imgslot img { max-width: 100%; max-height: 100%; object-fit: contain; }
+  .imgslot img[src^="{{"] { display: none; }
+  .imgslot .ph { display: none; }
+  .imgslot img[src^="{{"] + .ph {
+    display: flex; align-items: center; justify-content: center; text-align: center;
+    width: 100%; height: 100%; border: 2px dashed var(--line); border-radius: 10px;
+    font-size: 11.5px; color: var(--faint); padding: 12px; word-break: break-all;
+  }
+  .frame.dark .ph { border-color: rgba(255,255,255,.25); color: rgba(255,255,255,.55); }
+
+  /* 2. Logo */
+  .logo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px; }
+  .logo-item { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: #fff; }
+  .logo-item .frame { height: 170px; padding: 22px; display: flex; align-items: center; justify-content: center; }
+  .logo-item .frame.dark { background: var(--ink); }
+  .logo-item .cap { border-top: 1px solid var(--line); padding: 10px 14px; font-size: 12px; color: var(--muted); }
+  .logo-item .cap b { color: var(--ink); font-size: 12.5px; }
+
+  /* 3. Clear space & minimumformaat */
+  .clear-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+  .clearspace-diagram {
+    background: #fff; border: 1px solid var(--line); border-radius: 18px;
+    padding: 30px; display: flex; align-items: center; justify-content: center;
+  }
+  .cs-outer {
+    border: 2px dashed var(--coral); border-radius: 10px; padding: 44px; position: relative;
+  }
+  .cs-inner {
+    width: 150px; height: 90px; border: 1px solid var(--line); border-radius: 8px;
+    background: var(--paper); display: flex; align-items: center; justify-content: center;
+    font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 14px; color: var(--faint);
+  }
+  .cs-x {
+    position: absolute; font-family: 'Poppins', sans-serif; font-weight: 700;
+    font-size: 12px; color: var(--coral); background: #fff; padding: 0 5px;
+  }
+  .cs-x.top { top: 14px; left: 50%; transform: translateX(-50%); }
+  .cs-x.bottom { bottom: 14px; left: 50%; transform: translateX(-50%); }
+  .cs-x.left { left: 12px; top: 50%; transform: translateY(-50%); }
+  .cs-x.right { right: 12px; top: 50%; transform: translateY(-50%); }
+  .min-card .label, .card .label {
+    font-size: 11px; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--faint); font-weight: 700; margin-bottom: 6px;
+  }
+  .min-card p, .card p.body { font-size: 14px; line-height: 1.65; }
+  .min-vals { display: flex; gap: 28px; margin-top: 16px; flex-wrap: wrap; }
+  .min-vals .val b { font-family: 'Poppins', sans-serif; font-size: 26px; display: block; }
+  .min-vals .val span { font-size: 12px; color: var(--faint); }
+
+  /* 4. Misuse */
+  .misuse-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 14px; }
+  .dont { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: #fff; position: relative; }
+  .dont .demo { height: 110px; display: flex; align-items: center; justify-content: center; background: var(--paper); overflow: hidden; }
+  .dont .demo svg { width: 54px; height: 54px; }
+  /* Unfilled fallback: proxy SVG instead of the dashed path-slot */
+  .dont .demo.imgslot .ph { border: none; border-radius: 0; padding: 0; }
+  .dont .demo.imgslot .ph.busy { background: repeating-linear-gradient(45deg, #d9d2cb, #d9d2cb 6px, #c4bcb4 6px, #c4bcb4 12px); }
+  .dont .cross {
+    position: absolute; top: 8px; right: 8px; width: 22px; height: 22px; border-radius: 50%;
+    background: var(--coral); color: #fff; font-weight: 700; font-size: 12px; line-height: 22px; text-align: center;
+  }
+  .dont .cap { border-top: 1px solid var(--line); padding: 9px 12px; font-size: 11.5px; color: var(--muted); line-height: 1.4; }
+
+  /* 5. Kleur */
+  .swatch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 20px; }
+  .swatch { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: #fff; }
+  .swatch .chip {
+    height: 84px;
+    background: repeating-linear-gradient(45deg, var(--paper), var(--paper) 8px, #f1ece7 8px, #f1ece7 16px);
+    border-bottom: 1px solid var(--line);
+  }
+  .swatch .info { padding: 12px 16px; }
+  .swatch .info b { font-size: 13.5px; display: block; }
+  .swatch .info code { font-size: 11.5px; color: var(--faint); }
+  .swatch .info em { display: block; font-style: normal; font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .contrast-scroll { overflow-x: auto; background: #fff; border: 1px solid var(--line); border-radius: 14px; }
+  table.contrast { width: 100%; border-collapse: collapse; min-width: 560px; }
+  table.contrast th, table.contrast td { text-align: left; padding: 12px 18px; font-size: 13px; border-bottom: 1px solid var(--line); }
+  table.contrast th {
+    font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--faint);
+    font-family: 'Poppins', sans-serif;
+  }
+  table.contrast tr:last-child td { border-bottom: none; }
+  table.contrast td.ratio { font-weight: 700; }
+  .wcag-note { font-size: 12px; color: var(--faint); margin-top: 10px; line-height: 1.6; }
+
+  /* 6. Typografie */
+  .type-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin-bottom: 16px; }
+  .specimen { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 26px 30px; }
+  .specimen .aa { font-size: 64px; line-height: 1; margin-bottom: 10px; }
+  .specimen.kop .aa { font-family: 'Poppins', sans-serif; font-weight: 700; }
+  .specimen.body-f .aa { font-family: 'Open Sans', sans-serif; font-weight: 400; }
+  .specimen b.fname { font-size: 15px; display: block; }
+  .specimen span.weights { font-size: 12px; color: var(--faint); display: block; margin-top: 2px; }
+  .specimen .abc { font-size: 13px; color: var(--muted); margin-top: 12px; word-break: break-all; line-height: 1.5; }
+  .scale-scroll { overflow-x: auto; background: #fff; border: 1px solid var(--line); border-radius: 14px; }
+  table.scale { width: 100%; border-collapse: collapse; min-width: 480px; }
+  table.scale th, table.scale td { text-align: left; padding: 11px 18px; font-size: 13px; border-bottom: 1px solid var(--line); }
+  table.scale th { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--faint); font-family: 'Poppins', sans-serif; }
+  table.scale tr:last-child td { border-bottom: none; }
+
+  /* 7. Toepassingen */
+  .mockup-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px; }
+  .mockup { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: #fff; }
+  .mockup .frame { height: 190px; padding: 14px; display: flex; align-items: center; justify-content: center; }
+  .mockup .cap { border-top: 1px solid var(--line); padding: 10px 14px; font-size: 12px; color: var(--muted); }
+
+  /* 8. Downloads */
+  .downloads code.path {
+    display: block; background: var(--paper); border: 1px solid var(--line); border-radius: 10px;
+    padding: 14px 18px; font-size: 13px; margin: 12px 0 18px; word-break: break-all;
+  }
+  .downloads ul { list-style: none; }
+  .downloads li { font-size: 13.5px; line-height: 1.7; padding-left: 18px; position: relative; color: var(--muted); }
+  .downloads li::before { content: ""; position: absolute; left: 0; top: 9px; width: 7px; height: 7px; border-radius: 50%; background: var(--coral); }
+  .downloads li b { color: var(--ink); }
+
+  footer { margin-top: 64px; font-size: 12.5px; color: var(--faint); line-height: 1.7; }
+  footer code { background: #fff; border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px; font-size: 11.5px; }
+
+  @media (max-width: 640px) {
+    header h1 { font-size: 30px; }
+    .wrap { padding: 40px 20px 72px; }
+    .idea { padding: 40px 24px; }
+    .cs-outer { padding: 30px; }
+    .cs-inner { width: 110px; height: 70px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="kicker">{{MERKNAAM}} · Brand guidelines</div>
+    <h1>Merkrichtlijnen</h1>
+    <div class="meta-row">
+      <span>Identiteit: {{VERSIE_LABEL}}</span>
+      <span>Datum: {{DATUM}}</span>
+      <span>Eén pagina, acht regels, alles wat nodig is</span>
+    </div>
+  </header>
+
+  <section>
+    <div class="num">01</div>
+    <h2>Het idee</h2>
+    <p class="intro">Eén zin die elk ontwerpbesluit hierna verklaart. Wie deze zin kent, kan het merk toepassen zonder de rest van dit document.</p>
+    <div class="idea">
+      <p>{{HET_IDEE}}</p>
+      <div class="sub">Twijfel bij een toepassing? Toets tegen deze zin, niet tegen smaak.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="num">02</div>
+    <h2>Logo</h2>
+    <p class="intro">Drie varianten dekken elk gebruik. Kies op achtergrond, nooit op voorkeur: licht op lichte vlakken, donker op donkere vlakken, mono waar maar één drukkleur beschikbaar is.</p>
+    <div class="logo-grid">
+      <div class="logo-item">
+        <div class="frame imgslot">
+          <img src="{{LOGO_LICHT_SRC}}" alt="Primair logo voor lichte achtergronden">
+          <span class="ph">{{LOGO_LICHT_SRC}}</span>
+        </div>
+        <div class="cap"><b>Licht</b> · primaire variant, voor paper en witte vlakken</div>
+      </div>
+      <div class="logo-item">
+        <div class="frame dark imgslot">
+          <img src="{{LOGO_DONKER_SRC}}" alt="Logo voor donkere achtergronden">
+          <span class="ph">{{LOGO_DONKER_SRC}}</span>
+        </div>
+        <div class="cap"><b>Donker</b> · voor ink en foto-achtergronden met laag contrast</div>
+      </div>
+      <div class="logo-item">
+        <div class="frame imgslot">
+          <img src="{{LOGO_MONO_SRC}}" alt="Monochrome logovariant">
+          <span class="ph">{{LOGO_MONO_SRC}}</span>
+        </div>
+        <div class="cap"><b>Mono</b> · één kleur, voor stempels, gravure en eenkleurige druk</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="num">03</div>
+    <h2>Clear space &amp; minimumformaat</h2>
+    <p class="intro">Ruimte is onderdeel van het logo. Binnen de gestreepte zone komt niets: geen tekst, geen rand, geen ander beeldmerk.</p>
+    <div class="clear-grid">
+      <div class="clearspace-diagram">
+        <div class="cs-outer">
+          <span class="cs-x top">x</span>
+          <span class="cs-x bottom">x</span>
+          <span class="cs-x left">x</span>
+          <span class="cs-x right">x</span>
+          <div class="cs-inner">Logo</div>
+        </div>
+      </div>
+      <div class="card min-card">
+        <div class="label">De regel</div>
+        <p>{{CLEARSPACE_REGEL}}</p>
+        <div class="min-vals">
+          <div class="val"><b>{{MIN_PRINT_MM}} mm</b><span>minimale breedte in print</span></div>
+          <div class="val"><b>{{MIN_SCHERM_PX}} px</b><span>minimale breedte op scherm</span></div>
+        </div>
+        <p style="margin-top:16px; font-size:12.5px; color:var(--faint);">Onder het minimum: gebruik het losse beeldmerk (icoon) in plaats van de volledige lockup.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="num">04</div>
+    <h2>Misuse</h2>
+    <p class="intro">Acht dingen die nooit mogen, ongeacht de context. Elk voorbeeld toont het gekozen merk bewust fout toegepast, gerenderd in de stresstest van fase 4; zolang die render ontbreekt staat er een neutrale proxy-vorm.</p>
+    <div class="misuse-grid">
+      <div class="dont">
+        <div class="demo imgslot">
+          <img src="{{MISUSE_1_SRC}}" alt="Merk niet-proportioneel uitgerekt">
+          <span class="ph"><svg viewBox="0 0 100 100" style="color:#F36E59; transform: scaleX(1.6);"><rect x="26" y="26" width="48" height="48" rx="12" fill="currentColor"/><circle cx="80" cy="22" r="5" fill="currentColor"/></svg></span>
+        </div>
+        <span class="cross">&#10005;</span>
+        <div class="cap">Niet uitrekken of samendrukken</div>
+      </div>
+      <div class="dont">
+        <div class="demo imgslot">
+          <img src="{{MISUSE_2_SRC}}" alt="Merk herkleurd naar een niet-vastgelegde kleur">
+          <span class="ph"><svg viewBox="0 0 100 100"><rect x="26" y="26" width="48" height="48" rx="12" fill="#2b6cb0"/><circle cx="80" cy="22" r="5" fill="#2b6cb0"/></svg></span>
+        </div>
+        <span class="cross">&#10005;</span>
+        <div class="cap">Geen eigen kleuren kiezen: alleen de vastgelegde varianten</div>
+      </div>
+      <div class="dont">
+        <div class="demo imgslot">
+          <img src="{{MISUSE_3_SRC}}" alt="Merk met toegevoegde outline">
+          <span class="ph"><svg viewBox="0 0 100 100" style="color:#F36E59;"><rect x="26" y="26" width="48" height="48" rx="12" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="80" cy="22" r="5" fill="none" stroke="currentColor" stroke-width="3"/></svg></span>
+        </div>
+        <span class="cross">&#10005;</span>
+        <div class="cap">Geen outline toevoegen</div>
+      </div>
+      <div class="dont">
+        <div class="demo imgslot">
+          <img src="{{MISUSE_4_SRC}}" alt="Merk met slagschaduw">
+          <span class="ph"><svg viewBox="0 0 100 100" style="color:#F36E59; filter: drop-shadow(4px 5px 3px rgba(35,31,32,.45));"><rect x="26" y="26" width="48" height="48" rx="12" fill="currentColor"/><circle cx="80" cy="22" r="5" fill="currentColor"/></svg></span>
+        </div>
+        <span class="cross">&#10005;</span>
+        <div class="cap">Geen schaduw, gloed of filter</div>
+      </div>
+      <div class="dont">
+        <div class="demo imgslot">
+          <img src="{{MISUSE_5_SRC}}" alt="Merk op drukke achtergrond zonder rustvlak">
+          <span class="ph busy"><svg viewBox="0 0 100 100" style="color:#F36E59;"><rect x="26" y="26" width="48" height="48" rx="12" fill="currentColor"/><circle cx="80" cy="22" r="5" fill="currentColor"/></svg></span>
+        </div>
+        <span class="cross">&#10005;</span>
+        <div class="cap">Niet op drukke achtergronden zonder rustvlak</div>
+      </div>
+      <div class="dont">
+        <div class="demo imgslot">
+          <img src="{{MISUSE_6_SRC}}" alt="Merk geroteerd">
+          <span class="ph"><svg viewBox="0 0 100 100" style="color:#F36E59; transform: rotate(-24deg);"><rect x="26" y="26" width="48" height="48" rx="12" fill="currentColor"/><circle cx="80" cy="22" r="5" fill="currentColor"/></svg></span>
+        </div>
+        <span class="cross">&#10005;</span>
+        <div class="cap">Niet roteren of kantelen</div>
+      </div>
+      <div class="dont">
+        <div class="demo imgslot">
+          <img src="{{MISUSE_7_SRC}}" alt="Merk halftransparant als watermerk over tekst">
+          <span class="ph"><svg viewBox="0 0 100 100" style="color:#F36E59;"><g fill="#b7b0aa"><rect x="14" y="24" width="72" height="6" rx="3"/><rect x="14" y="38" width="72" height="6" rx="3"/><rect x="14" y="52" width="58" height="6" rx="3"/><rect x="14" y="66" width="66" height="6" rx="3"/></g><g opacity=".4"><rect x="30" y="30" width="40" height="40" rx="10" fill="currentColor"/><circle cx="75" cy="27" r="4" fill="currentColor"/></g></svg></span>
+        </div>
+        <span class="cross">&#10005;</span>
+        <div class="cap">Niet halftransparant als watermerk gebruiken</div>
+      </div>
+      <div class="dont">
+        <div class="demo imgslot">
+          <img src="{{MISUSE_8_SRC}}" alt="Oud en nieuw merk gemengd in een lockup">
+          <span class="ph"><svg viewBox="0 0 100 100" style="color:#F36E59;"><path d="M28 62 L38 30 L48 62 Z" fill="#8a8485"/><rect x="24" y="64" width="28" height="6" rx="3" fill="#8a8485"/><rect x="58" y="34" width="30" height="30" rx="8" fill="currentColor"/><circle cx="92" cy="30" r="4" fill="currentColor"/></svg></span>
+        </div>
+        <span class="cross">&#10005;</span>
+        <div class="cap">Oud en nieuw merk nooit mengen: de migratie per drager is atomair</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="num">05</div>
+    <h2>Kleur</h2>
+    <p class="intro">Vier tokens, vaste rollen. Nieuwe tinten komen er alleen bij via een nieuwe versie van deze richtlijnen, nooit ad hoc in een los document.</p>
+    <div class="swatch-grid">
+      <div class="swatch">
+        <div class="chip" style="background:{{KLEUR_1_HEX}}"></div>
+        <div class="info"><b>{{KLEUR_1_NAAM}}</b><code>{{KLEUR_1_HEX}}</code><em>{{KLEUR_1_ROL}}</em></div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background:{{KLEUR_2_HEX}}"></div>
+        <div class="info"><b>{{KLEUR_2_NAAM}}</b><code>{{KLEUR_2_HEX}}</code><em>{{KLEUR_2_ROL}}</em></div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background:{{KLEUR_3_HEX}}"></div>
+        <div class="info"><b>{{KLEUR_3_NAAM}}</b><code>{{KLEUR_3_HEX}}</code><em>{{KLEUR_3_ROL}}</em></div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background:{{KLEUR_4_HEX}}"></div>
+        <div class="info"><b>{{KLEUR_4_NAAM}}</b><code>{{KLEUR_4_HEX}}</code><em>{{KLEUR_4_ROL}}</em></div>
+      </div>
+    </div>
+    <div class="contrast-scroll">
+      <table class="contrast">
+        <thead>
+          <tr><th>Combinatie</th><th>Contrastratio</th><th>WCAG 2.2</th><th>Gebruik</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>{{CONTRAST_1_COMBINATIE}}</td><td class="ratio">{{CONTRAST_1_RATIO}}</td><td>{{CONTRAST_1_WCAG}}</td><td>{{CONTRAST_1_GEBRUIK}}</td></tr>
+          <tr><td>{{CONTRAST_2_COMBINATIE}}</td><td class="ratio">{{CONTRAST_2_RATIO}}</td><td>{{CONTRAST_2_WCAG}}</td><td>{{CONTRAST_2_GEBRUIK}}</td></tr>
+          <tr><td>{{CONTRAST_3_COMBINATIE}}</td><td class="ratio">{{CONTRAST_3_RATIO}}</td><td>{{CONTRAST_3_WCAG}}</td><td>{{CONTRAST_3_GEBRUIK}}</td></tr>
+          <tr><td>{{CONTRAST_4_COMBINATIE}}</td><td class="ratio">{{CONTRAST_4_RATIO}}</td><td>{{CONTRAST_4_WCAG}}</td><td>{{CONTRAST_4_GEBRUIK}}</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="wcag-note">Normen (WCAG 2.2): minimaal 4.5:1 voor normale tekst, 3:1 voor grote tekst (vanaf 18.66px vet of 24px regulier) en voor UI-componenten. Een combinatie die alleen 3:1 haalt, is dus wel toegestaan voor koppen en knoppen, niet voor bodytekst.</p>
+  </section>
+
+  <section>
+    <div class="num">06</div>
+    <h2>Typografie</h2>
+    <p class="intro">Twee lettertypes, vaste rolverdeling: het kopfont voor koppen en cijfers die aandacht verdienen, het bodyfont voor al het overige. Nooit een derde font toevoegen.</p>
+    <div class="type-grid">
+      <div class="specimen kop">
+        <div class="aa">Aa</div>
+        <b class="fname">{{FONT_KOP}}</b>
+        <span class="weights">Koppen · gewichten: {{FONT_KOP_GEWICHTEN}}</span>
+        <div class="abc">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789</div>
+      </div>
+      <div class="specimen body-f">
+        <div class="aa">Aa</div>
+        <b class="fname">{{FONT_BODY}}</b>
+        <span class="weights">Bodytekst · gewichten: {{FONT_BODY_GEWICHTEN}}</span>
+        <div class="abc">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789</div>
+      </div>
+    </div>
+    <div class="scale-scroll">
+      <table class="scale">
+        <thead><tr><th>Niveau</th><th>Formaat</th><th>Font</th></tr></thead>
+        <tbody>
+          <tr><td>H1</td><td>{{SCHAAL_H1}} px</td><td>{{FONT_KOP}}</td></tr>
+          <tr><td>H2</td><td>{{SCHAAL_H2}} px</td><td>{{FONT_KOP}}</td></tr>
+          <tr><td>H3</td><td>{{SCHAAL_H3}} px</td><td>{{FONT_KOP}}</td></tr>
+          <tr><td>Body</td><td>{{SCHAAL_BODY}} px</td><td>{{FONT_BODY}}</td></tr>
+          <tr><td>Caption</td><td>{{SCHAAL_CAPTION}} px</td><td>{{FONT_BODY}}</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="wcag-note">Bron van de fonts: {{FONT_BRON}}. De specimens hierboven renderen in Poppins en Open Sans als benadering; het genoemde merkfont is leidend.</p>
+  </section>
+
+  <section>
+    <div class="num">07</div>
+    <h2>Toepassingen</h2>
+    <p class="intro">Het merk zoals het er in het echt uitziet. Deze vier beelden zijn de referentie bij twijfel over maat, marge of kleurgebruik in een nieuwe toepassing.</p>
+    <div class="mockup-grid">
+      <div class="mockup">
+        <div class="frame imgslot">
+          <img src="{{MOCKUP_1_SRC}}" alt="Toepassing 1">
+          <span class="ph">{{MOCKUP_1_SRC}}</span>
+        </div>
+        <div class="cap">{{MOCKUP_1_LABEL}}</div>
+      </div>
+      <div class="mockup">
+        <div class="frame imgslot">
+          <img src="{{MOCKUP_2_SRC}}" alt="Toepassing 2">
+          <span class="ph">{{MOCKUP_2_SRC}}</span>
+        </div>
+        <div class="cap">{{MOCKUP_2_LABEL}}</div>
+      </div>
+      <div class="mockup">
+        <div class="frame imgslot">
+          <img src="{{MOCKUP_3_SRC}}" alt="Toepassing 3">
+          <span class="ph">{{MOCKUP_3_SRC}}</span>
+        </div>
+        <div class="cap">{{MOCKUP_3_LABEL}}</div>
+      </div>
+      <div class="mockup">
+        <div class="frame imgslot">
+          <img src="{{MOCKUP_4_SRC}}" alt="Toepassing 4">
+          <span class="ph">{{MOCKUP_4_SRC}}</span>
+        </div>
+        <div class="cap">{{MOCKUP_4_LABEL}}</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="downloads">
+    <div class="num">08</div>
+    <h2>Downloads</h2>
+    <p class="intro">Alle definitieve bestanden staan in één versie-map. Werk altijd vanuit deze map; oudere versies blijven bestaan maar worden nooit meer gebruikt in nieuwe uitingen.</p>
+    <div class="card">
+      <div class="label">Versie-map ({{VERSIE_LABEL}})</div>
+      <code class="path">{{VERSIE_MAP_PAD}}</code>
+      <ul>
+        <li><b>SVG-bronbestanden</b> per variant (licht, donker, mono), herkleurbaar via currentColor</li>
+        <li><b>PNG-exports</b> op 1024, 512 en 256 px breed, transparante achtergrond</li>
+        <li><b>Favicon-set</b>: 32 en 16 px, plus 180 px apple-touch-icon</li>
+        <li><b>Social-avatars</b>: 400 px vierkant, licht en donker</li>
+        <li><b>Deze richtlijnen</b> als HTML en PDF, plus de creative brief uit fase 0</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>Template: <code>brain/skills/rebrand/assets/guidelines_template.html</code> · gevuld in fase 5 van het /rebrand-traject.<br>
+    Nieuwe identiteitsversie: nieuwe versie-map en een nieuw exemplaar van dit document, bestaande mappen blijven onaangeraakt.</p>
+  </footer>
+
+</div>
+</body>
+</html>
