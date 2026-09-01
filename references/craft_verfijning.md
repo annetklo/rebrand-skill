@@ -1,12 +1,12 @@
-# Craft en verfijning: van simpel voorstel naar gedisciplineerd detail-systeem
+# Craft and refinement: from simple proposal to disciplined detail system
 
 Reference for the /rebrand design phase. Turns sourced research (luxury monogram cases, type-craft literature, complexity studies, verified SVG techniques) into executable recipes for the wordmark workbench (opentype.js outlines + paper.js booleans). Written 2026-09-01 after client feedback that round-three proposals were too simple.
 
 ---
 
-## 1. Leidend principe
+## 1. Guiding principle
 
-**Verfijning is consistente micro-beslissingen. Complexiteit is een gedisciplineerd detail-systeem. Nooit een tweede los idee.**
+**Refinement is consistent micro-decisions. Complexity is a disciplined detail system. Never a second separate idea.**
 
 The research base splits visual complexity in two kinds, and only one of them helps:
 
@@ -21,7 +21,7 @@ The luxury interlocks confirm this. Chanel's CC (1925, designed by Coco Chanel, 
 
 ---
 
-## 2. De optische-correctie-checklist
+## 2. The optical-correction checklist
 
 The unifying principle, Tobias Frere-Jones, "Typeface Mechanics: 001" (frerejones.com): what must look equal has to be made unequal. A mathematically even mark looks cheap; an optically even mark looks drawn. Run this checklist on every render.
 
@@ -29,35 +29,35 @@ The unifying principle, Tobias Frere-Jones, "Typeface Mechanics: 001" (frerejone
 - Round and pointed shapes must extend past baseline and cap height to appear equal to flat shapes. Typical overshoot: 1 to 3 percent of the relevant height (Wikipedia, "Overshoot (typography)"); Peter Karow's *Digital Formats for Typefaces* (1987) gives about 3 percent for a round O and about 5 percent for a pointed apex.
 - **Verify in the workbench**: query Cal Sans via opentype.js, compare the y-extremes of O versus H. Whatever Cal Sans overshoots, any generated shape sharing an alignment edge with a letter (bars, cards, monogram frame) must inherit that overshoot or it will look short.
 
-### 2.2 Optisch centreren
+### 2.2 Optical centering
 - Visual center sits above geometric center. Crossbars and waists placed at the mathematical middle look like they slide down (Frere-Jones, Typeface Mechanics 001). Asymmetric shapes in containers must be shifted toward their center of mass, not their bounding-box center (Shestopalov, "Optical Effects in User Interfaces", Medium).
 - **Verify**: flip the mark 180 degrees. A correctly balanced form looks top-heavy when flipped; if it still looks fine, top and bottom are mechanically equal and the mark is optically off. For containers, overlay the shape's area centroid, not the bounds center. Note: paper.js has no built-in centroid (`path.position` is the bounds center); compute it via `path.flatten()` plus the standard polygon-centroid formula.
 
-### 2.3 Joint-compensatie
+### 2.3 Joint compensation
 - Where two full-weight strokes meet (M and W vertices, bowl-to-stem in R), mass accumulates and reads as a dark clot. Type designers taper or pinch the junction. Source: Karen Cheng, *Designing Type* (Yale), join diagrams. Related: horizontals must be thinner than verticals, curves thicker than straights at their extremes; even Helvetica is secretly modulated (Cheng; Scannerlicker, "The Art of Eyeballing IV: The Stroke").
 - **Verify**: apply a Gaussian blur of roughly the stroke width (the squint test, per Walter Tracy's *Letters of Credit* spacing method) and look for dark knots at junctions. In the workbench: add `<filter><feGaussianBlur stdDeviation="{strokeWidth/2}"/></filter>` to the exported SVG and view it in a browser; no raster tooling needed. In paper.js, union the outline and flag regions where local thickness exceeds the measured stem width. Also **measure Cal Sans directly**: stem of H, bar of H, max width of O. Those ratios are the brand's built-in compensation constants; any added bar or accessory shape uses the measured horizontal weight, never the stem weight.
 
-### 2.4 Hoek-hierarchie (corner rounding)
+### 2.4 Corner hierarchy (corner rounding)
 - Two professional rules. First, nested corners are concentric: inner radius = outer radius minus offset, never the same value (Apple Human Interface Guidelines, concentricity). Second, high-end corners are not circular arcs: continuous-curvature (G2) superellipse corners, as on iOS icons, ramp curvature smoothly instead of jumping (Figma, "Desperately Seeking Squircles", Daniel Furse; Figma's ~60 percent corner smoothing approximates the Apple shape).
 - **Verify**: zoom to a corner; a visible kink where straight meets arc means G1, not G2. For the rounded-card brand language this is the single highest-leverage upgrade.
 
-### 2.5 Spacing en kleur
+### 2.5 Spacing and color
 - Perceived distance is area between shapes, not edge distance: straight-to-straight pairs get the most space, round-to-round the least (Tracy's sidebearing derivation). A dot or geometric accessory beside letters is spaced by perceived gap; the blurred silhouette decides, there is no universal number.
 - **Verify**: insert the shape into an n-o-n control string at the same size, squint, compare gaps.
 
-### 2.6 Ink traps, alleen waar inkt zou samenkomen
+### 2.6 Ink traps, only where ink would actually pool
 - Functional traps absorb dot gain at small sizes (canonical case: Matthew Carter's Bell Centennial, 1975 to 1978, for AT&T phone directories); decorative traps at display size are legitimate (Dinamo's Whyte Inktrap) **but only at junctions where ink would actually pool**, otherwise they read as random bites.
 - **Verify**: render the mark at 16 px and 32 px, look for junctions that close up; those are the trap candidates.
 
 ---
 
-## 3. Het detail-systeem-recept
+## 3. The detail-system recipe
 
 How to make many artifacts feel like one authored decision. The pattern across every verified case:
 
 1. **One named master drawing.** Saks Fifth Avenue (Pentagram, 2007): Joe Finocchiaro redrew the cursive logo, then a fixed 64-tile grid generates enormous variety, all from one master. Graphcore (Pentagram, 2017): 65+ alternate characters, all derived from one parent geometry (Graphcore Quantized, based on Caslon's Egyptian). Guinness (Design Bridge, 2016): Gerry Barney's single hand-drawn harp, informed by working with harp makers Niebisch & Tree. Rule for the workbench: **one canonical M+R construction, committed as the master; every treatment is a derivation, never a redrawing.**
 2. **One radius language.** The bite radius, the card radius, the corner rounding of any accessory shape and the monogram's terminal rounding are the same value or concentric derivatives of it (outer minus offset, per HIG concentricity). One number, declared once in the workbench config.
-3. **One gap width.** Every sparing (weave gap, inline inset, letterspace accessory gap) uses a single geometric offset distance. Because it comes from `offset()`, it is identical everywhere regardless of crossing angle (see recipe 4.1). Vuistregel startwaarde (geen gemeten bron): gap ≈ 10 to 15 percent of the strand width, then tune by the squint test of 2.3; below ~8 percent the gap closes at favicon size, above ~25 percent the weave falls apart.
+3. **One gap width.** Every gap (weave gap, inline inset, letterspace accessory gap) uses a single geometric offset distance. Because it comes from `offset()`, it is identical everywhere regardless of crossing angle (see recipe 4.1). Rule-of-thumb starting value (no measured source): gap ≈ 10 to 15 percent of the strand width, then tune by the squint test of 2.3; below ~8 percent the gap closes at favicon size, above ~25 percent the weave falls apart.
 4. **One angle.** If any treatment introduces a diagonal (pattern hatching, taper direction), it is one angle reused, not per-case choices.
 5. **One symmetry rule for the monogram.** Mirror or point rotation between M and R, strictly applied, with alternating over-under at every crossing (the Chanel/Gucci lesson from section 1).
 6. **The detail must tessellate.** Burberry's TB monogram (2018, Tisci and Saville, documented by Dezeen and Design Week) was built to tile into an all-over pattern: one drawn asset, an entire surface language. MIT Media Lab proves the failure mode and the fix: Richard The's 2011 algorithmic identity with 40,000 permutations was unmanageable; Pentagram's 2014 redesign (Bierut) kept the same 7x7 grid but derived one fixed ML monogram plus 23 related glyphs (Dezeen; pentagram.com). If the M+R intersection logic can also generate a card edge, a divider and a pattern fill, it is a system. If it works once at one size, it is a trick.
@@ -66,11 +66,11 @@ Trend context, for the rationale slide: the swing back from "blanding" (term coi
 
 ---
 
-## 4. Weef- en gravure-mechanica in SVG
+## 4. Weave and engraving mechanics in SVG
 
 Concrete pipeline recipes. Library: **paperjs-offset 2.2.1** (verified on npm 2026-09-01; exports `offset(path, distance, options)`, `offsetStroke(path, distance, options)`, `analyze(...)`; paper.js itself has no offset API). Glue: opentype.js `path.toPathData(decimals)` gives the `d` string; `new paper.CompoundPath({ pathData: d })` imports it.
 
-### 4.1 Gap-weave (echte sparing in plaats van kleur-truc)
+### 4.1 Gap weave (a true air gap instead of a color trick)
 Alternating intersection colors fake the weave; the craft version keeps a constant air gap.
 1. Per crossing, take the over-strand path `A`.
 2. `Agrow = offset(A, gap, {insert:false})`.
@@ -78,34 +78,34 @@ Alternating intersection colors fake the weave; the craft version keeps a consta
 4. Because the gap is a geometric offset it is identical at every crossing angle, and the result is pure fills that survive SVG export.
 Pitfalls: call `path.resolveCrossings()` and `reorient()` before subtracting (paper.js PathItem reference); alternating over-under per crossing requires splitting strands at crossings (`getIntersections()` + `splitAt`) rather than subtracting a whole strand. Cheaper halo variant (ground-color stroke at `strandWidth + 2*gap` under the over-strand's fill) only works on an opaque flat ground.
 
-### 4.2 Inline (gravure) strokes
+### 4.2 Inline (engraving) strokes
 1. `inner = offset(glyphCompound, -inset, {insert:false})`.
 2. Render the glyph filled, then `inner` as a ground-color stroke of `inlineWidth`, wrapped in a `<clipPath>` of the glyph silhouette.
 3. Run `analyze()` and drop degenerate subpaths: at stems thinner than `2*inset` the inner contour vanishes or flips winding.
 4. Prefer `join:'round'` (acute corners produce miter spikes); keep correct winding on counters (o, e, R).
 
-### 4.3 Hoeken afronden op willekeurige polygonen
+### 4.3 Rounding corners on arbitrary polygons
 Per vertex `v`: move in `r` along each edge to `p1` and `p2`, replace the corner with `p1 -> arc -> p2`. In paper.js: emit two segments with handles pointing toward `v`, scaled by `KAPPA = 4/3*(sqrt(2)-1) ≈ 0.5523` times the handle length (the standard cubic circular-arc constant, used in paper.js internals). Clamp `r` to `min(lenIn, lenOut)/2` or adjacent rounds self-intersect. Concave vertices bow the other way; the handle-toward-vertex construction handles both. Fallback on path strings: svg-round-corners 0.4.3 or svg-path-round-corners 0.1.5 (both verified on npm), after `path.flatten(0.25)`.
 
-### 4.4 Tapered strokes (variabele lijndikte)
+### 4.4 Tapered strokes (variable line width)
 paper.js has no variable-width stroke; build the outline from the centerline. Sample the spine at N offsets with `getPointAt(t)` and `getNormalAt(t)`, compute `w(t)`, emit left rail forward and right rail backward, close, `smooth({type:'continuous'})`. Where `w(t)` exceeds the local radius of curvature the inner rail loops: `resolveCrossings()` then keep the largest-area subpath, or clamp `w`. Theory: Tiller and Hanson, "Offsets of Two-Dimensional Profiles" (IEEE CG&A, 1984); practical treatment in Pomax, "A Primer on Bezier Curves". For uniform-width strands (weave arms) skip all this and use `offsetStroke()`.
 
-### 4.5 Pattern fills geclipt op het merk
+### 4.5 Pattern fills clipped to the mark
 `<clipPath id="mark">` from the toPathData output with `clip-rule="nonzero"` (opentype.js emits nonzero winding; evenodd punches counters wrongly), plus `<pattern patternUnits="userSpaceOnUse">` (the default objectBoundingBox rescales the texture per element), fill a covering rect with `fill="url(#dots)" clip-path="url(#mark)"`. Dots under ~0.75px die in raster export. A 45-degree line texture is one `<line>` with `patternTransform="rotate(45)"`. Soft edges need `<mask>`, clipPath is hard-edged by spec (MDN pattern/clipPath/mask docs).
 
-### 4.6 Constructie-grid voor presentatie (gemeten, nooit decoratief)
+### 4.6 Construction grid for presentation (measured, never decorative)
 From opentype.js: `font.unitsPerEm`, `font.ascender`, `font.descender`, `font.tables.os2.sxHeight` / `sCapHeight` give honest baseline, x-height and cap-height lines. From paper.js: `path.bounds` gives sidebearing verticals; fit circles to real curves by taking three points via `getPointAt` and solving the circumcircle. Render as a separate layer: 0.5px ink lines at 15 to 20 percent opacity, `stroke-dasharray="4 4"` for secondary lines, mono radius labels, crosshair ticks at centers. **Every circle must derive from real geometry**: the Apple golden-ratio overlay is debunked (Fast Company; Gizmodo, 2013; Rob Janoff designed by eye), while the 2012 Twitter bird genuinely was built from circular arcs (Martin Grasser, Creative Bloq). Fake grids read as theater and undermine the proposal.
 
-### 4.7 Multi-weight simulatie uit single-weight Cal Sans
+### 4.7 Multi-weight simulation from single-weight Cal Sans
 Cheap: same-color `stroke` of `2*delta` with `paint-order="stroke"` (SVG2, MDN); add roughly `2*delta` tracking because letterfit collapses; counters of e and a clog first. Honest: `offset(glyph, delta)` then `unite()` to clear self-intersections, check with `analyze()`. Negative delta (light simulation) destroys the glyph near half the thinnest stem: measure the thinnest stem first and clamp. Display-only for the mark, never presented as a text-weight system.
 
-### 4.8 Cirkel-gaten, crescents en banen (exacte constructies)
+### 4.8 Circle holes, crescents and orbits (exact constructions)
 Proven constructions for disc-based marks. Every ratio below is relative to the disc radius R; all four come from a real engagement round and survived client gates.
 
-1. **Disc met patrijspoort (gat)**: hole radius ≈ 0.40 R, hole center on the 45-degree diagonal at ≈ 0.42 R from the disc center; optional spark punch of 0.17 R on the opposite diagonal. Keep every hole fully inside the rim.
-2. **Crescent (maanfase)**: cutter circle of equal radius R, its center offset 1.20 to 1.30 R along the -45-degree diagonal; a deeper offset gives a subtler phase. Because the cutter crosses the disc edge, this must be constructed analytically, not with a fill rule (see the second warning below).
-3. **Ring (baan)**: tilted ellipse with rx = R + 13 and ry = 0.40 to 0.42 R, rotated about -16 degrees. Render the back half in a warm shade behind the disc, the front half in ink; an optional gap-halo (a paper-color stroke under the front arc) gives a crafted crossing. The ring is a hero/midden detail: it drops at 16 px per the responsive ladder (section 5).
-4. **Ratio-ladder voor accessoires**: 1 : 0.42 : 0.18 of the disc radius keeps a family of marks in one language (the one-number discipline of section 3).
+1. **Disc with porthole (hole)**: hole radius ≈ 0.40 R, hole center on the 45-degree diagonal at ≈ 0.42 R from the disc center; optional spark punch of 0.17 R on the opposite diagonal. Keep every hole fully inside the rim.
+2. **Crescent (moon phase)**: cutter circle of equal radius R, its center offset 1.20 to 1.30 R along the -45-degree diagonal; a deeper offset gives a subtler phase. Because the cutter crosses the disc edge, this must be constructed analytically, not with a fill rule (see the second warning below).
+3. **Ring (orbit)**: tilted ellipse with rx = R + 13 and ry = 0.40 to 0.42 R, rotated about -16 degrees. Render the back half in a warm shade behind the disc, the front half in ink; an optional gap-halo (a paper-color stroke under the front arc) gives a crafted crossing. The ring is a hero/middle-tier detail: it drops at 16 px per the responsive ladder (section 5).
+4. **Ratio ladder for accessories**: 1 : 0.42 : 0.18 of the disc radius keeps a family of marks in one language (the one-number discipline of section 3).
 
 Precision warnings, both proven the hard way:
 - **Arc precision**: a full-circle arc drawn as a single path needs a tiny start/end offset to avoid a zero-length arc. Rounding path coordinates to 1 decimal collapses a 0.01 offset, the arc degenerates and the hole silently vanishes. Use 2 decimals and a 0.05 offset.
@@ -115,40 +115,40 @@ Precision warnings, both proven the hard way:
 
 ---
 
-## 5. Schaal-strategie: complex hero, eenvoudige klein-varianten
+## 5. Scale strategy: complex hero, simple small-size variants
 
 Joe Harrison's Responsive Logos project (responsivelogos.co.uk, 2014) established the standard answer to "complex marks break at favicon size": complexity is a property of a **size tier**, not of the identity. His demos strip marks down step by step until only the most distinctive fragment survives (Chanel's Cs, the Guinness harp).
 
 Ship every direction as a three-tier ladder:
 
-| Tier | Gebruik | Wat blijft |
+| Tier | Use | What survives |
 |---|---|---|
 | **Hero** | Covers, site header, deck title | Full wordmark with the complete detail system (weave gaps, inline, pattern context) |
-| **Midden** | Doc headers, mail signature, small lockups | Reduced wordmark: one detail survives (bites only, or tittle color only); gaps widen to stay open |
+| **Middle** | Doc headers, mail signature, small lockups | Reduced wordmark: one detail survives (bites only, or tittle color only); gaps widen to stay open |
 | **Fragment** | Favicon, avatar, app icon | One distinctive fragment: the M+R monogram or one treated letter; functional ink-trap logic applies (section 2.6) |
 
 Drop rules per size: details that close up at 32 px move to hero-only; anything invisible at 24 px AND doing no work at poster size gets cut entirely (it works at no tier). The client is never choosing between simple and complex; she is choosing a system that contains both. Validation per tier: the simplified tier must still read as the same mark (Harrison), and the whole must read as "Mission Relearn" in under a second (MAYA: aesthetic preference peaks where novelty and typicality are jointly maximized, Hekkert, Snelders and van Wieringen, British Journal of Psychology, 2003).
 
 ---
 
-## 6. Presentatie-verfijning (gate pages)
+## 6. Presentation refinement (gate pages)
 
 Top studios present the making process as evidence: Design Bridge built physical harp models with harp makers and credits illustrator Gerry Barney (Creative Review interview); Aston Martin's badge is hand-made by Vaughtons, a 203-year-old Birmingham silversmith (Dezeen; Wallpaper; Aston Martin press release); LV frames its monogram as a jacquard-woven watermark. Refinement is also a story about how the thing was made.
 
-Apply to the gate pages, opened as a local review surface (de HTML in de browser):
+Apply to the gate pages, opened as a local review surface (the HTML in the browser):
 
-**Every gate page opens with a systeem-context-mock**: a fragment of the client's real design language (page header, kicker, card) with the candidate in place, because the deciding question is not "is it beautiful on a tile" but "hoort het merk er ineens bij".
+**Every gate page opens with a system-context mock**: a fragment of the client's real design language (page header, kicker, card) with the candidate in place, because the deciding question is not "is it beautiful on a tile" but "does the brand suddenly belong here".
 
 1. **Construction layer per candidate**: the measured grid from recipe 4.6 as a toggleable or side-by-side layer, showing baseline, overshoot, the shared radius and the shared gap width with labeled values. Only measured geometry, never decorative circles.
 2. **Detail crops**: one intersection at 400 percent showing the constant air gap; one corner at 400 percent showing the G2 rounding. Zoomed craft is what distinguishes drawn from generated.
-3. **The responsive ladder in one row**: hero, midden, fragment side by side at true relative sizes, plus a genuine 16 px favicon render.
+3. **The responsive ladder in one row**: hero, middle, fragment side by side at true relative sizes, plus a genuine 16 px favicon render.
 4. **In-context mocks from the pattern rule**: the same intersection logic deployed as a card edge, a divider and a pattern fill (the Burberry TB tessellation model), proving system over trick.
 5. **The squint-test pair**: the mark next to its Gaussian-blurred version, demonstrating even color with no clots (Tracy).
 6. **Name the master**: state which construction is the master drawing and that every variant derives from it (the Saks/Graphcore convention). Generated variety on top of one drawn master reads as system; without a master it reads as arbitrary.
 
 ---
 
-## 7. De stop-regel
+## 7. The stop rule
 
 Add a detail only when all four hold (grounded in section 1 sources):
 - (a) it is generated by a rule already in the system (Pieters et al., design complexity);
@@ -166,21 +166,21 @@ Hard cap for the hero: **one treatment carrying at most two coordinated details*
 
 ---
 
-## Volgende ronde MR (concreet)
+## Next MR round (concrete)
 
-Three refined directions applying this file to tonight's vervlochten-stapel and M+R-weave candidates.
+Three refined directions applying this file to tonight's interwoven-stack and M+R-weave candidates.
 
-**1. Gap-weave M+R met constante sparing**
-Wat: rebuild the M+R monogram with a real air gap at every crossing instead of alternating colors, over-under strictly alternating, M and R related by one symmetry rule (mirror or 180-degree rotation, the Chanel/Gucci construction).
-Recepten: 4.1 (offset-subtract weave, split strands at crossings), 2.3 (blur test on the junctions), 4.6 (measured grid for presentation).
-Verfijnder omdat: the gap is one geometric constant identical at every angle, so the weave reads as material craft (jacquard logic) instead of a coloring trick, and it survives on any ground including photos.
+**1. Gap-weave M+R with a constant air gap**
+What: rebuild the M+R monogram with a real air gap at every crossing instead of alternating colors, over-under strictly alternating, M and R related by one symmetry rule (mirror or 180-degree rotation, the Chanel/Gucci construction).
+Recipes: 4.1 (offset-subtract weave, split strands at crossings), 2.3 (blur test on the junctions), 4.6 (measured grid for presentation).
+More refined because: the gap is one geometric constant identical at every angle, so the weave reads as material craft (jacquard logic) instead of a coloring trick, and it survives on any ground including photos.
 
-**2. Inline-gravure woordmerk op de vervlochten stapel**
-Wat: the kiss-tight stack keeps its composition, but each glyph gets a single inline stroke at one inset (the system gap width), clipped to the silhouette, with tittles solid coral as the only color event.
-Recepten: 4.2 (true offset inline with analyze-guard on thin stems), 2.1 (inherit Cal Sans overshoot on any aligned edge), 2.6 (drop the inline at the fragment tier where it closes at 32 px).
-Verfijnder omdat: the engraved line is a repeated micro-decision governed by the shared gap constant, adding density that signals craft (Tang et al. 2025) while the silhouette, and thus tier 2 and 3, stays exactly tonight's mark.
+**2. Inline-engraved wordmark on the interwoven stack**
+What: the kiss-tight stack keeps its composition, but each glyph gets a single inline stroke at one inset (the system gap width), clipped to the silhouette, with tittles solid coral as the only color event.
+Recipes: 4.2 (true offset inline with analyze-guard on thin stems), 2.1 (inherit Cal Sans overshoot on any aligned edge), 2.6 (drop the inline at the fragment tier where it closes at 32 px).
+More refined because: the engraved line is a repeated micro-decision governed by the shared gap constant, adding density that signals craft (Tang et al. 2025) while the silhouette, and thus tier 2 and 3, stays exactly tonight's mark.
 
-**3. Patroon-uit-monogram: de weave als oppervlaktetaal**
-Wat: derive a tessellating tile from the M+R weave intersection (one crossing as the repeat unit), deployed as card edges, section dividers and a cover pattern fill, presented next to the hero mark.
-Recepten: 4.5 (userSpaceOnUse pattern clipped to shapes), 4.3 (tile corners rounded with the card radius), 6.4 (in-context mocks on the gate page).
-Verfijnder omdat: it converts the single trick into a Burberry-TB-style surface system where one drawn asset generates the whole brand world, which is exactly what separates a system from a busier logo (MIT Media Lab lesson: one rule, a family of artifacts).
+**3. Pattern-from-monogram: the weave as surface language**
+What: derive a tessellating tile from the M+R weave intersection (one crossing as the repeat unit), deployed as card edges, section dividers and a cover pattern fill, presented next to the hero mark.
+Recipes: 4.5 (userSpaceOnUse pattern clipped to shapes), 4.3 (tile corners rounded with the card radius), 6.4 (in-context mocks on the gate page).
+More refined because: it converts the single trick into a Burberry-TB-style surface system where one drawn asset generates the whole brand world, which is exactly what separates a system from a busier logo (MIT Media Lab lesson: one rule, a family of artifacts).

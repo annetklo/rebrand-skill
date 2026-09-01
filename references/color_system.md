@@ -1,12 +1,12 @@
-# Color system: the kleur-spoor of Fase 3
+# Color system: the color track of Phase 3
 
-How to build a full color system around one core color. Runs as one of the three parallel tracks in Fase 3 (beeldmerk, woordmerk, kleur), after the concept gate. Inputs: the creative brief (Fase 0), the chosen territory (Fase 1), the chosen concept (Fase 2), and the core color. Output: the palette gate page (spec at the bottom) that the client approves before Fase 4.
+How to build a full color system around one core color. Runs as one of the three parallel tracks in Phase 3 (mark, wordmark, color), after the concept gate. Inputs: the creative brief (Phase 0), the chosen territory (Phase 1), the chosen concept (Phase 2), and the core color. Output: the palette gate page (spec at the bottom) that the client approves before Phase 4.
 
 Brand-agnostic: the recipe works for any client core color. Mission Relearn coral is the worked example throughout.
 
 ## Step 0: pin the anchor hex, do not trust this file
 
-Before anything else, confirm the exact core color with the user. Brand documents drift: MR's coral appears as `#F36E59` in older documents and as `#ED7059` in a later design-system revision; the live design-system CSS turned out to be the single source of truth. A ramp built on the wrong anchor is worthless, so ask which hex is canonical, or read it from the client's live CSS, or from optional project knowledge (bijv. een clients- of brand-bestand als je dat hebt). The worked example below uses `#F36E59` with ink `#231F20`; regenerate all derived values if the anchor differs.
+Before anything else, confirm the exact core color with the user. Brand documents drift: MR's coral appears as `#F36E59` in older documents and as `#ED7059` in a later design-system revision; the live design-system CSS turned out to be the single source of truth. A ramp built on the wrong anchor is worthless, so ask which hex is canonical, or read it from the client's live CSS, or from optional project knowledge (e.g. a clients or brand file if you have one). The worked example below uses `#F36E59` with ink `#231F20`; regenerate all derived values if the anchor differs.
 
 Never generate the anchor from a formula. The brand color IS one step of the ramp (usually 500); everything else is built outward from it.
 
@@ -103,7 +103,7 @@ Method A, wheel-derived (use when the brand needs hues that are provably distinc
 - Split-complementary is the pragmatic default: the two hues flanking the complement (H 181 and H 241 for coral), contrast without the vibration of a direct complement.
 - Analogous (warm red, orange, amber around coral): harmonious and calm but low differentiation; only works when the neutral ramp carries all functional contrast.
 
-Method B, environment-derived (use when the brand already lives somewhere): pull candidate hues from the chosen Fase 1 territory moodboard and from colors the brand already owns de facto. MR example: navy `#181B2B` (dark surfaces in the current design system) and sky-blue `#DCEEF5` (info chips) are already supporting hues in production; a wheel exercise that ignores them proposes a palette the brand cannot migrate to. Extract, then normalize: rebuild each inherited hue as a proper ramp with the step-1 recipe so cross-hue steps are interchangeable at equal contrast (coral-700 and blue-700 must both pass 4.5:1 on white).
+Method B, environment-derived (use when the brand already lives somewhere): pull candidate hues from the chosen Phase 1 territory moodboard and from colors the brand already owns de facto. MR example: navy `#181B2B` (dark surfaces in the current design system) and sky-blue `#DCEEF5` (info chips) are already supporting hues in production; a wheel exercise that ignores them proposes a palette the brand cannot migrate to. Extract, then normalize: rebuild each inherited hue as a proper ramp with the step-1 recipe so cross-hue steps are interchangeable at equal contrast (coral-700 and blue-700 must both pass 4.5:1 on white).
 
 How many is too many: **one accent plus at most two supporting hue families plus the neutral ramp.** Frame the distribution as 60-30-10: tinted neutrals roughly 60% of any surface, supporting hue 30%, brand accent 10%. Color is the strongest recall handle a brand has (in Reboot's 2018 online recall study, 78% of participants remembered a brand's primary color versus 43% its name), and that handle only works when the 10% stays singular, so never introduce a second accent (MR's design system says this verbatim: "Don't introduce a second accent"). Status colors (success, warning, danger, info) are functional, not brand: build each as a small ramp (bg, border, text) with the same recipe, but they do not count toward the hue budget and never appear in brand expression.
 
@@ -153,17 +153,17 @@ def contrast(hex1, hex2):
 def verdict(ratio):
     labels = []
     if ratio >= 7.0:
-        labels.append("AAA normale tekst")
+        labels.append("AAA normal text")
     if ratio >= 4.5:
-        labels.append("AA normale tekst")
+        labels.append("AA normal text")
     if ratio >= 3.0:
-        labels.append("AA grote tekst / UI")
-    return ", ".join(labels) if labels else "FAALT alles"
+        labels.append("AA large text / UI")
+    return ", ".join(labels) if labels else "FAILS everything"
 
 if __name__ == "__main__":
     a, b = sys.argv[1], sys.argv[2]
     r = contrast(a, b)
-    print("%s op %s: %.2f:1  [%s]" % (a, b, r, verdict(r)))
+    print("%s on %s: %.2f:1  [%s]" % (a, b, r, verdict(r)))
 ```
 
 Required pairs (the gate page shows all of them with pass/fail per threshold):
@@ -186,18 +186,18 @@ Required pairs (the gate page shows all of them with pass/fail per threshold):
 
 ## Deliverable: the palette gate page
 
-One HTML gate page in the engagement folder in your workspace (`<engagement-map>/<datum>-rebrand-<naam>/`), in the same design language as the exploration gate page from the concept phase: branded for the brand under review (MR-branded for MR work, client-branded for client work). Open the gate page as a local review surface (de HTML in de browser). Never write into an existing brand-style folder; exports later land in a new version folder in Fase 5.
+One HTML gate page in the engagement folder in your workspace (`<engagement-folder>/<date>-rebrand-<name>/`), in the same design language as the exploration gate page from the concept phase: branded for the brand under review (MR-branded for MR work, client-branded for client work). Open the gate page as a local review surface (the HTML in the browser). Never write into an existing brand-style folder; exports later land in a new version folder in Phase 5.
 
 Sections, in order:
 
-1. **Ramp-overzicht**: horizontal strips for the primary ramp, the neutral ramp, and each supporting ramp. Every swatch shows step number, hex, and OKLCH values. The anchor step gets a marker "merk-kleur, vast".
-2. **Token-voorstel**: two tables. Tier 1 primitives (numeric names: `coral-500`, `neutral-100`), then Tier 2 semantic mapping (`text-primary`, `text-muted`, `surface-page`, `surface-card`, `border-default`, `action-primary`, `action-primary-hover`, `focus-ring`, plus the status ramps) with one column per mode: licht and donker. Components will reference only Tier 2, so a future rebrand swaps Tier 1 and remaps Tier 2 without touching any template: state this on the page, it is the payoff of the whole exercise.
-3. **Contrast-tabel**: every required pair from step 4, script-computed ratio, and per threshold a chip: "voldoet AA", "voldoet AAA", or "faalt". Failing pairs stay visible with the fix next to them ("gebruik coral-700 voor tekst"). A gate page that only shows passing pairs is a sales page, not a review surface.
-4. **Dark-mode-preview**: the same mini-UI twice, side by side (licht / donker): a card with heading, body text, muted caption, one primary button, one link, one input with focus ring, one status banner. Both rendered purely from Tier 2 tokens.
-5. **In-context-strook**: the palette on the three most-used real applications from the Fase 0 brief (for MR typically: site-hero, offerte-pagina, LinkedIn-tegel).
+1. **Ramp overview**: horizontal strips for the primary ramp, the neutral ramp, and each supporting ramp. Every swatch shows step number, hex, and OKLCH values. The anchor step gets a marker "brand color, fixed".
+2. **Token proposal**: two tables. Tier 1 primitives (numeric names: `coral-500`, `neutral-100`), then Tier 2 semantic mapping (`text-primary`, `text-muted`, `surface-page`, `surface-card`, `border-default`, `action-primary`, `action-primary-hover`, `focus-ring`, plus the status ramps) with one column per mode: light and dark. Components will reference only Tier 2, so a future rebrand swaps Tier 1 and remaps Tier 2 without touching any template: state this on the page, it is the payoff of the whole exercise.
+3. **Contrast table**: every required pair from step 4, script-computed ratio, and per threshold a chip: "passes AA", "passes AAA", or "fails". Failing pairs stay visible with the fix next to them ("use coral-700 for text"). A gate page that only shows passing pairs is a sales page, not a review surface.
+4. **Dark-mode preview**: the same mini-UI twice, side by side (light / dark): a card with heading, body text, muted caption, one primary button, one link, one input with focus ring, one status banner. Both rendered purely from Tier 2 tokens.
+5. **In-context strip**: the palette on the three most-used real applications from the Phase 0 brief (for MR typically: site hero, quote page, LinkedIn tile).
 
 Gate: after the client reviews (annotations on the review surface for iteration, max two rounds, then freeze), close with one AskUserQuestion call, for example:
 
-- header: "Palet", question: "Welke kleursysteem-richting keur je goed voor fase 4?", options such as "Richting A zoals getoond", "Richting A met aanpassingen (zet ze in je antwoord)", "Nog een iteratieronde".
+- header: "Palette", question: "Which color-system direction do you approve for phase 4?", options such as "Direction A as shown", "Direction A with adjustments (put them in your answer)", "Another iteration round".
 
-The approved palette (hexes, OKLCH values, both token tables, and the full contrast table) is written to the run folder as `palet-def.md` so Fase 4 (stress-test) and Fase 5 (guidelines, `brand.md` update) read from one file instead of from the gate page's HTML.
+The approved palette (hexes, OKLCH values, both token tables, and the full contrast table) is written to the run folder as `palet-def.md` so Phase 4 (stress-test) and Phase 5 (guidelines, `brand.md` update) read from one file instead of from the gate page's HTML.

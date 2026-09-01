@@ -1,50 +1,50 @@
 <!DOCTYPE html>
 <!--
-  BRAND-GUIDELINES TEMPLATE (Fase 5 van /rebrand)
+  BRAND-GUIDELINES TEMPLATE (Phase 5 of /rebrand)
   Lean guidelines: one page, eight sections, everything a designer or tool needs
   to apply the brand correctly. Fill every {{PLACEHOLDER}} below. The page renders
   correctly with placeholders still visible: unfilled images collapse into a
   labeled slot instead of a broken-image icon, so a half-filled page never looks broken.
 
   PLACEHOLDERS (in order of appearance):
-    {{MERKNAAM}}          Brand name, e.g. "Mission Relearn"
-    {{VERSIE_LABEL}}      Version label of this identity, e.g. "v2 (2026-09)"
-    {{DATUM}}             Publication date of these guidelines
-    {{HET_IDEE}}          THE one-sentence brand idea. One sentence, no comma splice, quotable.
-    {{LOGO_LICHT_SRC}}    Relative or absolute path to the primary logo for light backgrounds (SVG or PNG)
-    {{LOGO_DONKER_SRC}}   Path to the logo variant for dark backgrounds
+    {{BRAND_NAME}}        Brand name, e.g. "Mission Relearn"
+    {{VERSION_LABEL}}     Version label of this identity, e.g. "v2 (2026-09)"
+    {{DATE}}              Publication date of these guidelines
+    {{THE_IDEA}}          THE one-sentence brand idea. One sentence, no comma splice, quotable.
+    {{LOGO_LIGHT_SRC}}    Relative or absolute path to the primary logo for light backgrounds (SVG or PNG)
+    {{LOGO_DARK_SRC}}     Path to the logo variant for dark backgrounds
     {{LOGO_MONO_SRC}}     Path to the one-colour (mono) variant
-    {{CLEARSPACE_REGEL}}  The clear-space rule in words, e.g. "x = de hoogte van het beeldmerk; houd rondom minimaal 1x vrij"
+    {{CLEARSPACE_RULE}}   The clear-space rule in words, e.g. "x = the height of the mark; keep at least 1x clear on all sides"
     {{MIN_PRINT_MM}}      Minimum logo width in print, number only, e.g. "12"
-    {{MIN_SCHERM_PX}}     Minimum logo width on screen, number only, e.g. "80"
+    {{MIN_SCREEN_PX}}     Minimum logo width on screen, number only, e.g. "80"
     {{MISUSE_1_SRC}} .. {{MISUSE_8_SRC}}   Paths to the eight real-mark misuse renders from the
-      Fase 4 misuse gallery (applications_stresstest.md step 4, stress-test misuse/ subfolder).
-      Same order as the table there: 1 uitrekken, 2 eigen kleur, 3 outline, 4 schaduw,
-      5 drukke achtergrond, 6 roteren, 7 watermerk, 8 oud-en-nieuw mengen.
-    {{KLEUR_1_NAAM}} {{KLEUR_1_HEX}} {{KLEUR_1_ROL}}   Colour token 1 (repeat for 2, 3, 4)
-    {{KLEUR_2_NAAM}} {{KLEUR_2_HEX}} {{KLEUR_2_ROL}}
-    {{KLEUR_3_NAAM}} {{KLEUR_3_HEX}} {{KLEUR_3_ROL}}
-    {{KLEUR_4_NAAM}} {{KLEUR_4_HEX}} {{KLEUR_4_ROL}}
-    {{CONTRAST_1_COMBINATIE}} {{CONTRAST_1_RATIO}} {{CONTRAST_1_WCAG}} {{CONTRAST_1_GEBRUIK}}   Contrast table row 1 (repeat for 2-4)
-      COMBINATIE e.g. "Ink op Paper", RATIO e.g. "13.4:1", WCAG e.g. "AAA" / "AA" / "alleen groot",
-      GEBRUIK e.g. "bodytekst". Compute real ratios (WCAG 2.2: 4.5:1 normale tekst, 3:1 grote tekst en UI).
-    {{CONTRAST_2_COMBINATIE}} {{CONTRAST_2_RATIO}} {{CONTRAST_2_WCAG}} {{CONTRAST_2_GEBRUIK}}
-    {{CONTRAST_3_COMBINATIE}} {{CONTRAST_3_RATIO}} {{CONTRAST_3_WCAG}} {{CONTRAST_3_GEBRUIK}}
-    {{CONTRAST_4_COMBINATIE}} {{CONTRAST_4_RATIO}} {{CONTRAST_4_WCAG}} {{CONTRAST_4_GEBRUIK}}
-    {{FONT_KOP}}          Heading typeface, e.g. "Cal Sans"
-    {{FONT_KOP_GEWICHTEN}}   Available/allowed weights, e.g. "600, 700"
+      Phase 4 misuse gallery (applications_stresstest.md step 4, stress-test misuse/ subfolder).
+      Same order as the table there: 1 stretching, 2 off-palette colour, 3 outline, 4 shadow,
+      5 busy background, 6 rotation, 7 watermark, 8 mixing old and new.
+    {{COLOR_1_NAME}} {{COLOR_1_HEX}} {{COLOR_1_ROLE}}   Colour token 1 (repeat for 2, 3, 4)
+    {{COLOR_2_NAME}} {{COLOR_2_HEX}} {{COLOR_2_ROLE}}
+    {{COLOR_3_NAME}} {{COLOR_3_HEX}} {{COLOR_3_ROLE}}
+    {{COLOR_4_NAME}} {{COLOR_4_HEX}} {{COLOR_4_ROLE}}
+    {{CONTRAST_1_COMBINATION}} {{CONTRAST_1_RATIO}} {{CONTRAST_1_WCAG}} {{CONTRAST_1_USE}}   Contrast table row 1 (repeat for 2-4)
+      COMBINATION e.g. "Ink on Paper", RATIO e.g. "13.4:1", WCAG e.g. "AAA" / "AA" / "large only",
+      USE e.g. "body text". Compute real ratios (WCAG 2.2: 4.5:1 normal text, 3:1 large text and UI).
+    {{CONTRAST_2_COMBINATION}} {{CONTRAST_2_RATIO}} {{CONTRAST_2_WCAG}} {{CONTRAST_2_USE}}
+    {{CONTRAST_3_COMBINATION}} {{CONTRAST_3_RATIO}} {{CONTRAST_3_WCAG}} {{CONTRAST_3_USE}}
+    {{CONTRAST_4_COMBINATION}} {{CONTRAST_4_RATIO}} {{CONTRAST_4_WCAG}} {{CONTRAST_4_USE}}
+    {{FONT_HEADING}}      Heading typeface, e.g. "Cal Sans"
+    {{FONT_HEADING_WEIGHTS}}   Available/allowed weights, e.g. "600, 700"
     {{FONT_BODY}}         Body typeface, e.g. "Open Sans"
-    {{FONT_BODY_GEWICHTEN}}  e.g. "400, 600, 700"
-    {{FONT_BRON}}         Where the fonts live, e.g. a Google Fonts URL or a local folder path
-    {{SCHAAL_H1}} {{SCHAAL_H2}} {{SCHAAL_H3}} {{SCHAAL_BODY}} {{SCHAAL_CAPTION}}   Type scale in px, numbers only
+    {{FONT_BODY_WEIGHTS}}  e.g. "400, 600, 700"
+    {{FONT_SOURCE}}       Where the fonts live, e.g. a Google Fonts URL or a local folder path
+    {{SCALE_H1}} {{SCALE_H2}} {{SCALE_H3}} {{SCALE_BODY}} {{SCALE_CAPTION}}   Type scale in px, numbers only
     {{MOCKUP_1_SRC}} {{MOCKUP_1_LABEL}}   Application mockup image + caption (repeat for 2-4)
     {{MOCKUP_2_SRC}} {{MOCKUP_2_LABEL}}
     {{MOCKUP_3_SRC}} {{MOCKUP_3_LABEL}}
     {{MOCKUP_4_SRC}} {{MOCKUP_4_LABEL}}
-    {{VERSIE_MAP_PAD}}    Absolute path to the version folder holding all assets, quoted if it contains spaces
+    {{VERSION_FOLDER_PATH}}    Absolute path to the version folder holding all assets, quoted if it contains spaces
 
   Notes for the filler:
-  - Misuse: the eight cards mirror the Fase 4 misuse gallery one-to-one (applications_stresstest.md
+  - Misuse: the eight cards mirror the Phase 4 misuse gallery one-to-one (applications_stresstest.md
     step 4). Fill each {{MISUSE_n_SRC}} with the matching real-mark render from the stress-test
     misuse/ folder; an unfilled card falls back to a generic proxy-shape SVG, so the page never
     breaks. Keep the eight captions verbatim, keep the card order, never remove or reword a card.
@@ -52,11 +52,11 @@
   - The type specimens render in Poppins/Open Sans as an approximation; the named brand fonts are leading.
   - Never use the em-dash character anywhere in filled text. Use a comma or colon.
 -->
-<html lang="nl">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Brand guidelines · {{MERKNAAM}}</title>
+<title>Brand guidelines · {{BRAND_NAME}}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
@@ -102,7 +102,7 @@
     background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 26px 30px;
   }
 
-  /* 1. Het idee */
+  /* 1. The idea */
   .idea {
     background: var(--ink); color: #fff; border-radius: 22px; padding: 56px 48px; text-align: center;
   }
@@ -133,7 +133,7 @@
   .logo-item .cap { border-top: 1px solid var(--line); padding: 10px 14px; font-size: 12px; color: var(--muted); }
   .logo-item .cap b { color: var(--ink); font-size: 12.5px; }
 
-  /* 3. Clear space & minimumformaat */
+  /* 3. Clear space & minimum size */
   .clear-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
   .clearspace-diagram {
     background: #fff; border: 1px solid var(--line); border-radius: 18px;
@@ -178,7 +178,7 @@
   }
   .dont .cap { border-top: 1px solid var(--line); padding: 9px 12px; font-size: 11.5px; color: var(--muted); line-height: 1.4; }
 
-  /* 5. Kleur */
+  /* 5. Colour */
   .swatch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 20px; }
   .swatch { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: #fff; }
   .swatch .chip {
@@ -201,7 +201,7 @@
   table.contrast td.ratio { font-weight: 700; }
   .wcag-note { font-size: 12px; color: var(--faint); margin-top: 10px; line-height: 1.6; }
 
-  /* 6. Typografie */
+  /* 6. Typography */
   .type-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin-bottom: 16px; }
   .specimen { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 26px 30px; }
   .specimen .aa { font-size: 64px; line-height: 1; margin-bottom: 10px; }
@@ -216,7 +216,7 @@
   table.scale th { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--faint); font-family: 'Poppins', sans-serif; }
   table.scale tr:last-child td { border-bottom: none; }
 
-  /* 7. Toepassingen */
+  /* 7. Applications */
   .mockup-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px; }
   .mockup { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: #fff; }
   .mockup .frame { height: 190px; padding: 14px; display: flex; align-items: center; justify-content: center; }
@@ -248,58 +248,58 @@
 <div class="wrap">
 
   <header>
-    <div class="kicker">{{MERKNAAM}} · Brand guidelines</div>
-    <h1>Merkrichtlijnen</h1>
+    <div class="kicker">{{BRAND_NAME}} · Brand guidelines</div>
+    <h1>Brand guidelines</h1>
     <div class="meta-row">
-      <span>Identiteit: {{VERSIE_LABEL}}</span>
-      <span>Datum: {{DATUM}}</span>
-      <span>Eén pagina, acht regels, alles wat nodig is</span>
+      <span>Identity: {{VERSION_LABEL}}</span>
+      <span>Date: {{DATE}}</span>
+      <span>One page, eight rules, everything that is needed</span>
     </div>
   </header>
 
   <section>
     <div class="num">01</div>
-    <h2>Het idee</h2>
-    <p class="intro">Eén zin die elk ontwerpbesluit hierna verklaart. Wie deze zin kent, kan het merk toepassen zonder de rest van dit document.</p>
+    <h2>The idea</h2>
+    <p class="intro">One sentence that explains every design decision after it. Anyone who knows this sentence can apply the brand without the rest of this document.</p>
     <div class="idea">
-      <p>{{HET_IDEE}}</p>
-      <div class="sub">Twijfel bij een toepassing? Toets tegen deze zin, niet tegen smaak.</div>
+      <p>{{THE_IDEA}}</p>
+      <div class="sub">In doubt about an application? Test against this sentence, not against taste.</div>
     </div>
   </section>
 
   <section>
     <div class="num">02</div>
     <h2>Logo</h2>
-    <p class="intro">Drie varianten dekken elk gebruik. Kies op achtergrond, nooit op voorkeur: licht op lichte vlakken, donker op donkere vlakken, mono waar maar één drukkleur beschikbaar is.</p>
+    <p class="intro">Three variants cover every use. Choose by background, never by preference: light on light surfaces, dark on dark surfaces, mono where only one print colour is available.</p>
     <div class="logo-grid">
       <div class="logo-item">
         <div class="frame imgslot">
-          <img src="{{LOGO_LICHT_SRC}}" alt="Primair logo voor lichte achtergronden">
-          <span class="ph">{{LOGO_LICHT_SRC}}</span>
+          <img src="{{LOGO_LIGHT_SRC}}" alt="Primary logo for light backgrounds">
+          <span class="ph">{{LOGO_LIGHT_SRC}}</span>
         </div>
-        <div class="cap"><b>Licht</b> · primaire variant, voor paper en witte vlakken</div>
+        <div class="cap"><b>Light</b> · primary variant, for paper and white surfaces</div>
       </div>
       <div class="logo-item">
         <div class="frame dark imgslot">
-          <img src="{{LOGO_DONKER_SRC}}" alt="Logo voor donkere achtergronden">
-          <span class="ph">{{LOGO_DONKER_SRC}}</span>
+          <img src="{{LOGO_DARK_SRC}}" alt="Logo for dark backgrounds">
+          <span class="ph">{{LOGO_DARK_SRC}}</span>
         </div>
-        <div class="cap"><b>Donker</b> · voor ink en foto-achtergronden met laag contrast</div>
+        <div class="cap"><b>Dark</b> · for ink and low-contrast photo backgrounds</div>
       </div>
       <div class="logo-item">
         <div class="frame imgslot">
-          <img src="{{LOGO_MONO_SRC}}" alt="Monochrome logovariant">
+          <img src="{{LOGO_MONO_SRC}}" alt="Monochrome logo variant">
           <span class="ph">{{LOGO_MONO_SRC}}</span>
         </div>
-        <div class="cap"><b>Mono</b> · één kleur, voor stempels, gravure en eenkleurige druk</div>
+        <div class="cap"><b>Mono</b> · one colour, for stamps, engraving and single-colour print</div>
       </div>
     </div>
   </section>
 
   <section>
     <div class="num">03</div>
-    <h2>Clear space &amp; minimumformaat</h2>
-    <p class="intro">Ruimte is onderdeel van het logo. Binnen de gestreepte zone komt niets: geen tekst, geen rand, geen ander beeldmerk.</p>
+    <h2>Clear space &amp; minimum size</h2>
+    <p class="intro">Space is part of the logo. Nothing enters the dashed zone: no text, no border, no other mark.</p>
     <div class="clear-grid">
       <div class="clearspace-diagram">
         <div class="cs-outer">
@@ -311,13 +311,13 @@
         </div>
       </div>
       <div class="card min-card">
-        <div class="label">De regel</div>
-        <p>{{CLEARSPACE_REGEL}}</p>
+        <div class="label">The rule</div>
+        <p>{{CLEARSPACE_RULE}}</p>
         <div class="min-vals">
-          <div class="val"><b>{{MIN_PRINT_MM}} mm</b><span>minimale breedte in print</span></div>
-          <div class="val"><b>{{MIN_SCHERM_PX}} px</b><span>minimale breedte op scherm</span></div>
+          <div class="val"><b>{{MIN_PRINT_MM}} mm</b><span>minimum width in print</span></div>
+          <div class="val"><b>{{MIN_SCREEN_PX}} px</b><span>minimum width on screen</span></div>
         </div>
-        <p style="margin-top:16px; font-size:12.5px; color:var(--faint);">Onder het minimum: gebruik het losse beeldmerk (icoon) in plaats van de volledige lockup.</p>
+        <p style="margin-top:16px; font-size:12.5px; color:var(--faint);">Below the minimum: use the standalone mark (icon) instead of the full lockup.</p>
       </div>
     </div>
   </section>
@@ -325,175 +325,175 @@
   <section>
     <div class="num">04</div>
     <h2>Misuse</h2>
-    <p class="intro">Acht dingen die nooit mogen, ongeacht de context. Elk voorbeeld toont het gekozen merk bewust fout toegepast, gerenderd in de stresstest van fase 4; zolang die render ontbreekt staat er een neutrale proxy-vorm.</p>
+    <p class="intro">Eight things that are never allowed, regardless of context. Each example shows the chosen mark deliberately misapplied, rendered in the phase 4 stress test; as long as that render is missing, a neutral proxy shape stands in.</p>
     <div class="misuse-grid">
       <div class="dont">
         <div class="demo imgslot">
-          <img src="{{MISUSE_1_SRC}}" alt="Merk niet-proportioneel uitgerekt">
+          <img src="{{MISUSE_1_SRC}}" alt="Mark stretched out of proportion">
           <span class="ph"><svg viewBox="0 0 100 100" style="color:#F36E59; transform: scaleX(1.6);"><rect x="26" y="26" width="48" height="48" rx="12" fill="currentColor"/><circle cx="80" cy="22" r="5" fill="currentColor"/></svg></span>
         </div>
         <span class="cross">&#10005;</span>
-        <div class="cap">Niet uitrekken of samendrukken</div>
+        <div class="cap">Do not stretch or compress</div>
       </div>
       <div class="dont">
         <div class="demo imgslot">
-          <img src="{{MISUSE_2_SRC}}" alt="Merk herkleurd naar een niet-vastgelegde kleur">
+          <img src="{{MISUSE_2_SRC}}" alt="Mark recoloured to an undefined colour">
           <span class="ph"><svg viewBox="0 0 100 100"><rect x="26" y="26" width="48" height="48" rx="12" fill="#2b6cb0"/><circle cx="80" cy="22" r="5" fill="#2b6cb0"/></svg></span>
         </div>
         <span class="cross">&#10005;</span>
-        <div class="cap">Geen eigen kleuren kiezen: alleen de vastgelegde varianten</div>
+        <div class="cap">Do not pick your own colours: only the defined variants</div>
       </div>
       <div class="dont">
         <div class="demo imgslot">
-          <img src="{{MISUSE_3_SRC}}" alt="Merk met toegevoegde outline">
+          <img src="{{MISUSE_3_SRC}}" alt="Mark with an added outline">
           <span class="ph"><svg viewBox="0 0 100 100" style="color:#F36E59;"><rect x="26" y="26" width="48" height="48" rx="12" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="80" cy="22" r="5" fill="none" stroke="currentColor" stroke-width="3"/></svg></span>
         </div>
         <span class="cross">&#10005;</span>
-        <div class="cap">Geen outline toevoegen</div>
+        <div class="cap">Do not add an outline</div>
       </div>
       <div class="dont">
         <div class="demo imgslot">
-          <img src="{{MISUSE_4_SRC}}" alt="Merk met slagschaduw">
+          <img src="{{MISUSE_4_SRC}}" alt="Mark with a drop shadow">
           <span class="ph"><svg viewBox="0 0 100 100" style="color:#F36E59; filter: drop-shadow(4px 5px 3px rgba(35,31,32,.45));"><rect x="26" y="26" width="48" height="48" rx="12" fill="currentColor"/><circle cx="80" cy="22" r="5" fill="currentColor"/></svg></span>
         </div>
         <span class="cross">&#10005;</span>
-        <div class="cap">Geen schaduw, gloed of filter</div>
+        <div class="cap">No shadow, glow or filter</div>
       </div>
       <div class="dont">
         <div class="demo imgslot">
-          <img src="{{MISUSE_5_SRC}}" alt="Merk op drukke achtergrond zonder rustvlak">
+          <img src="{{MISUSE_5_SRC}}" alt="Mark on a busy background without a calm backdrop">
           <span class="ph busy"><svg viewBox="0 0 100 100" style="color:#F36E59;"><rect x="26" y="26" width="48" height="48" rx="12" fill="currentColor"/><circle cx="80" cy="22" r="5" fill="currentColor"/></svg></span>
         </div>
         <span class="cross">&#10005;</span>
-        <div class="cap">Niet op drukke achtergronden zonder rustvlak</div>
+        <div class="cap">Not on busy backgrounds without a calm backdrop</div>
       </div>
       <div class="dont">
         <div class="demo imgslot">
-          <img src="{{MISUSE_6_SRC}}" alt="Merk geroteerd">
+          <img src="{{MISUSE_6_SRC}}" alt="Mark rotated">
           <span class="ph"><svg viewBox="0 0 100 100" style="color:#F36E59; transform: rotate(-24deg);"><rect x="26" y="26" width="48" height="48" rx="12" fill="currentColor"/><circle cx="80" cy="22" r="5" fill="currentColor"/></svg></span>
         </div>
         <span class="cross">&#10005;</span>
-        <div class="cap">Niet roteren of kantelen</div>
+        <div class="cap">Do not rotate or tilt</div>
       </div>
       <div class="dont">
         <div class="demo imgslot">
-          <img src="{{MISUSE_7_SRC}}" alt="Merk halftransparant als watermerk over tekst">
+          <img src="{{MISUSE_7_SRC}}" alt="Mark used semi-transparent as a watermark over text">
           <span class="ph"><svg viewBox="0 0 100 100" style="color:#F36E59;"><g fill="#b7b0aa"><rect x="14" y="24" width="72" height="6" rx="3"/><rect x="14" y="38" width="72" height="6" rx="3"/><rect x="14" y="52" width="58" height="6" rx="3"/><rect x="14" y="66" width="66" height="6" rx="3"/></g><g opacity=".4"><rect x="30" y="30" width="40" height="40" rx="10" fill="currentColor"/><circle cx="75" cy="27" r="4" fill="currentColor"/></g></svg></span>
         </div>
         <span class="cross">&#10005;</span>
-        <div class="cap">Niet halftransparant als watermerk gebruiken</div>
+        <div class="cap">Do not use semi-transparent as a watermark</div>
       </div>
       <div class="dont">
         <div class="demo imgslot">
-          <img src="{{MISUSE_8_SRC}}" alt="Oud en nieuw merk gemengd in een lockup">
+          <img src="{{MISUSE_8_SRC}}" alt="Old and new mark mixed in one lockup">
           <span class="ph"><svg viewBox="0 0 100 100" style="color:#F36E59;"><path d="M28 62 L38 30 L48 62 Z" fill="#8a8485"/><rect x="24" y="64" width="28" height="6" rx="3" fill="#8a8485"/><rect x="58" y="34" width="30" height="30" rx="8" fill="currentColor"/><circle cx="92" cy="30" r="4" fill="currentColor"/></svg></span>
         </div>
         <span class="cross">&#10005;</span>
-        <div class="cap">Oud en nieuw merk nooit mengen: de migratie per drager is atomair</div>
+        <div class="cap">Never mix the old and new mark: the migration per carrier is atomic</div>
       </div>
     </div>
   </section>
 
   <section>
     <div class="num">05</div>
-    <h2>Kleur</h2>
-    <p class="intro">Vier tokens, vaste rollen. Nieuwe tinten komen er alleen bij via een nieuwe versie van deze richtlijnen, nooit ad hoc in een los document.</p>
+    <h2>Colour</h2>
+    <p class="intro">Four tokens, fixed roles. New tints only get added through a new version of these guidelines, never ad hoc in a loose document.</p>
     <div class="swatch-grid">
       <div class="swatch">
-        <div class="chip" style="background:{{KLEUR_1_HEX}}"></div>
-        <div class="info"><b>{{KLEUR_1_NAAM}}</b><code>{{KLEUR_1_HEX}}</code><em>{{KLEUR_1_ROL}}</em></div>
+        <div class="chip" style="background:{{COLOR_1_HEX}}"></div>
+        <div class="info"><b>{{COLOR_1_NAME}}</b><code>{{COLOR_1_HEX}}</code><em>{{COLOR_1_ROLE}}</em></div>
       </div>
       <div class="swatch">
-        <div class="chip" style="background:{{KLEUR_2_HEX}}"></div>
-        <div class="info"><b>{{KLEUR_2_NAAM}}</b><code>{{KLEUR_2_HEX}}</code><em>{{KLEUR_2_ROL}}</em></div>
+        <div class="chip" style="background:{{COLOR_2_HEX}}"></div>
+        <div class="info"><b>{{COLOR_2_NAME}}</b><code>{{COLOR_2_HEX}}</code><em>{{COLOR_2_ROLE}}</em></div>
       </div>
       <div class="swatch">
-        <div class="chip" style="background:{{KLEUR_3_HEX}}"></div>
-        <div class="info"><b>{{KLEUR_3_NAAM}}</b><code>{{KLEUR_3_HEX}}</code><em>{{KLEUR_3_ROL}}</em></div>
+        <div class="chip" style="background:{{COLOR_3_HEX}}"></div>
+        <div class="info"><b>{{COLOR_3_NAME}}</b><code>{{COLOR_3_HEX}}</code><em>{{COLOR_3_ROLE}}</em></div>
       </div>
       <div class="swatch">
-        <div class="chip" style="background:{{KLEUR_4_HEX}}"></div>
-        <div class="info"><b>{{KLEUR_4_NAAM}}</b><code>{{KLEUR_4_HEX}}</code><em>{{KLEUR_4_ROL}}</em></div>
+        <div class="chip" style="background:{{COLOR_4_HEX}}"></div>
+        <div class="info"><b>{{COLOR_4_NAME}}</b><code>{{COLOR_4_HEX}}</code><em>{{COLOR_4_ROLE}}</em></div>
       </div>
     </div>
     <div class="contrast-scroll">
       <table class="contrast">
         <thead>
-          <tr><th>Combinatie</th><th>Contrastratio</th><th>WCAG 2.2</th><th>Gebruik</th></tr>
+          <tr><th>Combination</th><th>Contrast ratio</th><th>WCAG 2.2</th><th>Use</th></tr>
         </thead>
         <tbody>
-          <tr><td>{{CONTRAST_1_COMBINATIE}}</td><td class="ratio">{{CONTRAST_1_RATIO}}</td><td>{{CONTRAST_1_WCAG}}</td><td>{{CONTRAST_1_GEBRUIK}}</td></tr>
-          <tr><td>{{CONTRAST_2_COMBINATIE}}</td><td class="ratio">{{CONTRAST_2_RATIO}}</td><td>{{CONTRAST_2_WCAG}}</td><td>{{CONTRAST_2_GEBRUIK}}</td></tr>
-          <tr><td>{{CONTRAST_3_COMBINATIE}}</td><td class="ratio">{{CONTRAST_3_RATIO}}</td><td>{{CONTRAST_3_WCAG}}</td><td>{{CONTRAST_3_GEBRUIK}}</td></tr>
-          <tr><td>{{CONTRAST_4_COMBINATIE}}</td><td class="ratio">{{CONTRAST_4_RATIO}}</td><td>{{CONTRAST_4_WCAG}}</td><td>{{CONTRAST_4_GEBRUIK}}</td></tr>
+          <tr><td>{{CONTRAST_1_COMBINATION}}</td><td class="ratio">{{CONTRAST_1_RATIO}}</td><td>{{CONTRAST_1_WCAG}}</td><td>{{CONTRAST_1_USE}}</td></tr>
+          <tr><td>{{CONTRAST_2_COMBINATION}}</td><td class="ratio">{{CONTRAST_2_RATIO}}</td><td>{{CONTRAST_2_WCAG}}</td><td>{{CONTRAST_2_USE}}</td></tr>
+          <tr><td>{{CONTRAST_3_COMBINATION}}</td><td class="ratio">{{CONTRAST_3_RATIO}}</td><td>{{CONTRAST_3_WCAG}}</td><td>{{CONTRAST_3_USE}}</td></tr>
+          <tr><td>{{CONTRAST_4_COMBINATION}}</td><td class="ratio">{{CONTRAST_4_RATIO}}</td><td>{{CONTRAST_4_WCAG}}</td><td>{{CONTRAST_4_USE}}</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="wcag-note">Normen (WCAG 2.2): minimaal 4.5:1 voor normale tekst, 3:1 voor grote tekst (vanaf 18.66px vet of 24px regulier) en voor UI-componenten. Een combinatie die alleen 3:1 haalt, is dus wel toegestaan voor koppen en knoppen, niet voor bodytekst.</p>
+    <p class="wcag-note">Standards (WCAG 2.2): at least 4.5:1 for normal text, 3:1 for large text (from 18.66px bold or 24px regular) and for UI components. A combination that only reaches 3:1 is therefore allowed for headings and buttons, not for body text.</p>
   </section>
 
   <section>
     <div class="num">06</div>
-    <h2>Typografie</h2>
-    <p class="intro">Twee lettertypes, vaste rolverdeling: het kopfont voor koppen en cijfers die aandacht verdienen, het bodyfont voor al het overige. Nooit een derde font toevoegen.</p>
+    <h2>Typography</h2>
+    <p class="intro">Two typefaces, fixed division of roles: the heading font for headings and numbers that deserve attention, the body font for everything else. Never add a third font.</p>
     <div class="type-grid">
       <div class="specimen kop">
         <div class="aa">Aa</div>
-        <b class="fname">{{FONT_KOP}}</b>
-        <span class="weights">Koppen · gewichten: {{FONT_KOP_GEWICHTEN}}</span>
+        <b class="fname">{{FONT_HEADING}}</b>
+        <span class="weights">Headings · weights: {{FONT_HEADING_WEIGHTS}}</span>
         <div class="abc">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789</div>
       </div>
       <div class="specimen body-f">
         <div class="aa">Aa</div>
         <b class="fname">{{FONT_BODY}}</b>
-        <span class="weights">Bodytekst · gewichten: {{FONT_BODY_GEWICHTEN}}</span>
+        <span class="weights">Body text · weights: {{FONT_BODY_WEIGHTS}}</span>
         <div class="abc">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789</div>
       </div>
     </div>
     <div class="scale-scroll">
       <table class="scale">
-        <thead><tr><th>Niveau</th><th>Formaat</th><th>Font</th></tr></thead>
+        <thead><tr><th>Level</th><th>Size</th><th>Font</th></tr></thead>
         <tbody>
-          <tr><td>H1</td><td>{{SCHAAL_H1}} px</td><td>{{FONT_KOP}}</td></tr>
-          <tr><td>H2</td><td>{{SCHAAL_H2}} px</td><td>{{FONT_KOP}}</td></tr>
-          <tr><td>H3</td><td>{{SCHAAL_H3}} px</td><td>{{FONT_KOP}}</td></tr>
-          <tr><td>Body</td><td>{{SCHAAL_BODY}} px</td><td>{{FONT_BODY}}</td></tr>
-          <tr><td>Caption</td><td>{{SCHAAL_CAPTION}} px</td><td>{{FONT_BODY}}</td></tr>
+          <tr><td>H1</td><td>{{SCALE_H1}} px</td><td>{{FONT_HEADING}}</td></tr>
+          <tr><td>H2</td><td>{{SCALE_H2}} px</td><td>{{FONT_HEADING}}</td></tr>
+          <tr><td>H3</td><td>{{SCALE_H3}} px</td><td>{{FONT_HEADING}}</td></tr>
+          <tr><td>Body</td><td>{{SCALE_BODY}} px</td><td>{{FONT_BODY}}</td></tr>
+          <tr><td>Caption</td><td>{{SCALE_CAPTION}} px</td><td>{{FONT_BODY}}</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="wcag-note">Bron van de fonts: {{FONT_BRON}}. De specimens hierboven renderen in Poppins en Open Sans als benadering; het genoemde merkfont is leidend.</p>
+    <p class="wcag-note">Font source: {{FONT_SOURCE}}. The specimens above render in Poppins and Open Sans as an approximation; the named brand font is leading.</p>
   </section>
 
   <section>
     <div class="num">07</div>
-    <h2>Toepassingen</h2>
-    <p class="intro">Het merk zoals het er in het echt uitziet. Deze vier beelden zijn de referentie bij twijfel over maat, marge of kleurgebruik in een nieuwe toepassing.</p>
+    <h2>Applications</h2>
+    <p class="intro">The brand as it looks in real life. These four images are the reference in case of doubt about size, margin or colour use in a new application.</p>
     <div class="mockup-grid">
       <div class="mockup">
         <div class="frame imgslot">
-          <img src="{{MOCKUP_1_SRC}}" alt="Toepassing 1">
+          <img src="{{MOCKUP_1_SRC}}" alt="Application 1">
           <span class="ph">{{MOCKUP_1_SRC}}</span>
         </div>
         <div class="cap">{{MOCKUP_1_LABEL}}</div>
       </div>
       <div class="mockup">
         <div class="frame imgslot">
-          <img src="{{MOCKUP_2_SRC}}" alt="Toepassing 2">
+          <img src="{{MOCKUP_2_SRC}}" alt="Application 2">
           <span class="ph">{{MOCKUP_2_SRC}}</span>
         </div>
         <div class="cap">{{MOCKUP_2_LABEL}}</div>
       </div>
       <div class="mockup">
         <div class="frame imgslot">
-          <img src="{{MOCKUP_3_SRC}}" alt="Toepassing 3">
+          <img src="{{MOCKUP_3_SRC}}" alt="Application 3">
           <span class="ph">{{MOCKUP_3_SRC}}</span>
         </div>
         <div class="cap">{{MOCKUP_3_LABEL}}</div>
       </div>
       <div class="mockup">
         <div class="frame imgslot">
-          <img src="{{MOCKUP_4_SRC}}" alt="Toepassing 4">
+          <img src="{{MOCKUP_4_SRC}}" alt="Application 4">
           <span class="ph">{{MOCKUP_4_SRC}}</span>
         </div>
         <div class="cap">{{MOCKUP_4_LABEL}}</div>
@@ -504,23 +504,23 @@
   <section class="downloads">
     <div class="num">08</div>
     <h2>Downloads</h2>
-    <p class="intro">Alle definitieve bestanden staan in één versie-map. Werk altijd vanuit deze map; oudere versies blijven bestaan maar worden nooit meer gebruikt in nieuwe uitingen.</p>
+    <p class="intro">All final files live in one version folder. Always work from this folder; older versions remain but are never used again in new expressions.</p>
     <div class="card">
-      <div class="label">Versie-map ({{VERSIE_LABEL}})</div>
-      <code class="path">{{VERSIE_MAP_PAD}}</code>
+      <div class="label">Version folder ({{VERSION_LABEL}})</div>
+      <code class="path">{{VERSION_FOLDER_PATH}}</code>
       <ul>
-        <li><b>SVG-bronbestanden</b> per variant (licht, donker, mono), herkleurbaar via currentColor</li>
-        <li><b>PNG-exports</b> op 1024, 512 en 256 px breed, transparante achtergrond</li>
-        <li><b>Favicon-set</b>: 32 en 16 px, plus 180 px apple-touch-icon</li>
-        <li><b>Social-avatars</b>: 400 px vierkant, licht en donker</li>
-        <li><b>Deze richtlijnen</b> als HTML en PDF, plus de creative brief uit fase 0</li>
+        <li><b>SVG source files</b> per variant (light, dark, mono), recolourable via currentColor</li>
+        <li><b>PNG exports</b> at 1024, 512 and 256 px wide, transparent background</li>
+        <li><b>Favicon set</b>: 32 and 16 px, plus a 180 px apple-touch-icon</li>
+        <li><b>Social avatars</b>: 400 px square, light and dark</li>
+        <li><b>These guidelines</b> as HTML and PDF, plus the creative brief from phase 0</li>
       </ul>
     </div>
   </section>
 
   <footer>
-    <p>Template: <code>brain/skills/rebrand/assets/guidelines_template.html</code> · gevuld in fase 5 van het /rebrand-traject.<br>
-    Nieuwe identiteitsversie: nieuwe versie-map en een nieuw exemplaar van dit document, bestaande mappen blijven onaangeraakt.</p>
+    <p>Template: <code>brain/skills/rebrand/assets/guidelines_template.html</code> · filled in phase 5 of the /rebrand engagement.<br>
+    New identity version: a new version folder and a new copy of this document; existing folders stay untouched.</p>
   </footer>
 
 </div>

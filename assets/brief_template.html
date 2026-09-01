@@ -1,60 +1,60 @@
 <!DOCTYPE html>
 <!--
-  CREATIVE-BRIEF TEMPLATE (Fase 0 van /rebrand)
+  CREATIVE-BRIEF TEMPLATE (Phase 0 of /rebrand)
   Fill every {{PLACEHOLDER}} below. The page renders correctly with placeholders
   still visible, so you can open it half-filled without breaking the layout.
 
   PLACEHOLDERS (in order of appearance):
-    {{MERKNAAM}}                       Brand name, e.g. "Mission Relearn"
-    {{DATUM}}                          Date of the brief, e.g. "31 augustus 2026"
-    {{OPGESTELD_DOOR}}                 Who compiled it, e.g. "Claude + the brand owner"
-    {{AANLEIDING}}                     1-3 sentences: why a rebrand, why now
-    {{AMBITIE}}                        1-3 sentences: what the new brand must achieve
-    {{SCOPE_EVOLUTIE_CLASS}}           "chosen" if evolutie was picked, otherwise leave EMPTY
-    {{SCOPE_REVOLUTIE_CLASS}}          "chosen" if revolutie was picked, otherwise leave EMPTY
-    {{SCOPE_TOELICHTING}}              Why this scope was chosen, in the client's own words
-    {{ARCHITECTUUR_MODEL}}             One of: "Branded house" / "House of brands" / "Endorsed brands" / "Hybride"
-    {{MERKARCHITECTUUR}}               How this brand relates to sibling brands (e.g. a parent brand next to a product brand), 2-4 sentences
-    {{DOELGROEP_1_NAAM}} {{DOELGROEP_2_NAAM}} {{DOELGROEP_3_NAAM}}          Audience names
-    {{DOELGROEP_1_CONTEXT}} {{DOELGROEP_2_CONTEXT}} {{DOELGROEP_3_CONTEXT}} One sentence each: where they meet the brand
-    {{NIET_DOELGROEP_1}} {{NIET_DOELGROEP_2}} {{NIET_DOELGROEP_3}}          Who the brand deliberately does not serve (discovery 2.2), one short line each
-    {{ONLINESS_STATEMENT}}             The completed onliness sentence from discovery 2.4, one full sentence: "Wij zijn de enige ___ die ___"
-    {{DRIE_SECONDEN_GEVOEL}}           What someone must feel in the first 3 seconds, one sentence, quotable
-    {{NOOIT_GEVOEL}}                   What that same person may never feel (the never-feeling from discovery 2.3), one to three words
-    {{SLIDER_S1_GEWENST_PCT}} .. {{SLIDER_S7_GEWENST_PCT}}         Desired position per slider, number 0-100 (0 = left pole, 100 = right pole)
-    {{SLIDER_S1_HUIDIG_PCT}} .. {{SLIDER_S7_HUIDIG_PCT}}           Current position per slider (discovery 2.5); no gap = same number as gewenst
-    {{SLIDER_S1_CONCURRENT_PCT}} .. {{SLIDER_S7_CONCURRENT_PCT}}   Main competitor's position per slider (discovery 2.6)
-    {{SLIDER_S1_GAP}} .. {{SLIDER_S7_GAP}}   One gap sentence per slider: "Het merk moet van [huidig] naar [gewenst]; voor vorm/kleur/taal betekent dat ...". A slider without gap gets the single word "Behouden."
+    {{BRAND_NAME}}                     Brand name, e.g. "Mission Relearn"
+    {{DATE}}                           Date of the brief, e.g. "31 August 2026"
+    {{PREPARED_BY}}                    Who compiled it, e.g. "Claude + the brand owner"
+    {{TRIGGER}}                        1-3 sentences: why a rebrand, why now
+    {{AMBITION}}                       1-3 sentences: what the new brand must achieve
+    {{SCOPE_EVOLUTION_CLASS}}          "chosen" if evolution was picked, otherwise leave EMPTY
+    {{SCOPE_REVOLUTION_CLASS}}         "chosen" if revolution was picked, otherwise leave EMPTY
+    {{SCOPE_RATIONALE}}                Why this scope was chosen, in the client's own words
+    {{ARCHITECTURE_MODEL}}             One of: "Branded house" / "House of brands" / "Endorsed brands" / "Hybrid"
+    {{BRAND_ARCHITECTURE}}             How this brand relates to sibling brands (e.g. a parent brand next to a product brand), 2-4 sentences
+    {{AUDIENCE_1_NAME}} {{AUDIENCE_2_NAME}} {{AUDIENCE_3_NAME}}          Audience names
+    {{AUDIENCE_1_CONTEXT}} {{AUDIENCE_2_CONTEXT}} {{AUDIENCE_3_CONTEXT}} One sentence each: where they meet the brand
+    {{NON_AUDIENCE_1}} {{NON_AUDIENCE_2}} {{NON_AUDIENCE_3}}             Who the brand deliberately does not serve (discovery 2.2), one short line each
+    {{ONLINESS_STATEMENT}}             The completed onliness sentence from discovery 2.4, one full sentence: "We are the only ___ that ___"
+    {{THREE_SECOND_FEELING}}           What someone must feel in the first 3 seconds, one sentence, quotable
+    {{NEVER_FEELING}}                  What that same person may never feel (the never-feeling from discovery 2.3), one to three words
+    {{SLIDER_S1_DESIRED_PCT}} .. {{SLIDER_S7_DESIRED_PCT}}         Desired position per slider, number 0-100 (0 = left pole, 100 = right pole)
+    {{SLIDER_S1_CURRENT_PCT}} .. {{SLIDER_S7_CURRENT_PCT}}         Current position per slider (discovery 2.5); no gap = same number as desired
+    {{SLIDER_S1_COMPETITOR_PCT}} .. {{SLIDER_S7_COMPETITOR_PCT}}   Main competitor's position per slider (discovery 2.6)
+    {{SLIDER_S1_GAP}} .. {{SLIDER_S7_GAP}}   One gap sentence per slider: "The brand must move from [current] to [desired]; for form/colour/language that means ...". A slider without a gap gets the single word "Maintain."
       The seven axes, fixed order and poles (0 = left, 100 = right):
-      S1 Speels/Gezaghebbend · S2 Warm/Technisch · S3 Pionier/Betrouwbaar · S4 Toegankelijk/Exclusief
-      S5 Uitgesproken/Ingetogen · S6 Minimalistisch/Rijk aan detail · S7 Eigenzinnig/Mainstream
-    {{PERSOONLIJKHEID_TOELICHTING}}    1-2 sentences interpreting the seven positions together
-    {{BEWONDERD_1_MERK}} {{BEWONDERD_1_WAAROM}}   Admired brand + why (repeat for 2 and 3)
-    {{BEWONDERD_2_MERK}} {{BEWONDERD_2_WAAROM}}
-    {{BEWONDERD_3_MERK}} {{BEWONDERD_3_WAAROM}}
-    {{ANTI_1_MERK}} {{ANTI_1_WAAROM}}             Anti-reference + why (repeat for 2 and 3)
-    {{ANTI_2_MERK}} {{ANTI_2_WAAROM}}
-    {{ANTI_3_MERK}} {{ANTI_3_WAAROM}}
-    {{BEELDMERK_RICHTING}}             Chosen direction for the mark, 2-4 sentences, name the pattern (negatieve ruimte, dot-progressie, open baan, ...)
-    {{VORM_KERNWOORD_1}} {{VORM_KERNWOORD_2}} {{VORM_KERNWOORD_3}}  Three form-language keywords, e.g. "geometrisch", "een gewicht", "asymmetrie"
-    {{WOORDMERK_RICHTING}}             Chosen wordmark treatment, 1-3 sentences
-    {{KLEUR_1_HEX}} {{KLEUR_1_NAAM}} {{KLEUR_1_ROL}}   Colour direction swatch 1 (hex like #F36E59, name, role)
-    {{KLEUR_2_HEX}} {{KLEUR_2_NAAM}} {{KLEUR_2_ROL}}
-    {{KLEUR_3_HEX}} {{KLEUR_3_NAAM}} {{KLEUR_3_ROL}}
-    {{TOEPASSING_1}} ... {{TOEPASSING_5}}   The five applications the brand must excel in first, most important first
-    {{BEHOUD_1}} {{BEHOUD_2}} {{BEHOUD_3}}  Three things that may never get lost in the rebrand
-    {{DO_1}} .. {{DO_4}}               Do's: checkable design rules distilled from the discovery guardrails, each testable with ja/nee
+      S1 Playful/Authoritative · S2 Warm/Technical · S3 Pioneer/Trustworthy · S4 Accessible/Exclusive
+      S5 Outspoken/Understated · S6 Minimalist/Rich in detail · S7 Unconventional/Mainstream
+    {{PERSONALITY_SUMMARY}}            1-2 sentences interpreting the seven positions together
+    {{ADMIRED_1_BRAND}} {{ADMIRED_1_WHY}}   Admired brand + why (repeat for 2 and 3)
+    {{ADMIRED_2_BRAND}} {{ADMIRED_2_WHY}}
+    {{ADMIRED_3_BRAND}} {{ADMIRED_3_WHY}}
+    {{ANTI_1_BRAND}} {{ANTI_1_WHY}}         Anti-reference + why (repeat for 2 and 3)
+    {{ANTI_2_BRAND}} {{ANTI_2_WHY}}
+    {{ANTI_3_BRAND}} {{ANTI_3_WHY}}
+    {{MARK_DIRECTION}}                 Chosen direction for the mark, 2-4 sentences, name the pattern (negative space, dot progression, open orbit, ...)
+    {{FORM_KEYWORD_1}} {{FORM_KEYWORD_2}} {{FORM_KEYWORD_3}}  Three form-language keywords, e.g. "geometric", "one weight", "asymmetry"
+    {{WORDMARK_DIRECTION}}             Chosen wordmark treatment, 1-3 sentences
+    {{COLOR_1_HEX}} {{COLOR_1_NAME}} {{COLOR_1_ROLE}}   Colour direction swatch 1 (hex like #F36E59, name, role)
+    {{COLOR_2_HEX}} {{COLOR_2_NAME}} {{COLOR_2_ROLE}}
+    {{COLOR_3_HEX}} {{COLOR_3_NAME}} {{COLOR_3_ROLE}}
+    {{APPLICATION_1}} ... {{APPLICATION_5}}   The five applications the brand must excel in first, most important first
+    {{PRESERVE_1}} {{PRESERVE_2}} {{PRESERVE_3}}  Three things that may never get lost in the rebrand
+    {{DO_1}} .. {{DO_4}}               Do's: checkable design rules distilled from the discovery guardrails, each testable with yes/no
     {{DONT_1}} .. {{DONT_4}}           Don'ts: the negative twins (forbidden shapes, colours, tones), equally checkable
-    {{OPEN_VRAAG_1}} .. {{OPEN_VRAAG_3}}    Unresolved contradictions, a failed onliness test, parked points. Anything the discovery did not settle goes here, never smoothed into the body text
-    {{AKKOORD_BESLUIT}}                The literal decision, e.g. "Akkoord op deze brief, start fase 1"
-    {{AKKOORD_NAAM}}                   Who approves: the decision-owner from fase 0
-    {{AKKOORD_DATUM}}                  Approval date
+    {{OPEN_QUESTION_1}} .. {{OPEN_QUESTION_3}}    Unresolved contradictions, a failed onliness test, parked points. Anything the discovery did not settle goes here, never smoothed into the body text
+    {{APPROVAL_DECISION}}              The literal decision, e.g. "Brief approved, start phase 1"
+    {{APPROVAL_NAME}}                  Who approves: the decision-owner from phase 0
+    {{APPROVAL_DATE}}                  Approval date
 
   Notes for the filler:
   - Slider percentages: an unfilled slider falls back to the 50% midpoint, the layout never breaks.
   - Colour swatches: an unfilled hex renders as a neutral dashed swatch, the layout never breaks.
-  - Fewer than 4 do's/don'ts or fewer than 3 open vragen: delete the unused elements instead of leaving
-    raw placeholders. Zero open vragen is rare; then write one card explaining why there are none,
+  - Fewer than 4 do's/don'ts or fewer than 3 open questions: delete the unused elements instead of leaving
+    raw placeholders. Zero open questions is rare; then write one card explaining why there are none,
     do not delete the section.
   - The filled brief always ships with the verbatim discovery log as appendix: keep discovery_log.md
     next to this file in the project folder; the footer references it.
@@ -64,11 +64,11 @@
     section, in the same card/section design language, rather than dropping it.
   - Never use the em-dash character anywhere in filled text. Use a comma or colon.
 -->
-<html lang="nl">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Creative brief · {{MERKNAAM}}</title>
+<title>Creative brief · {{BRAND_NAME}}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
@@ -123,7 +123,7 @@
   }
   .stack > .card + .card { margin-top: 16px; }
 
-  /* Scope: evolutie of revolutie */
+  /* Scope: evolution or revolution */
   .scope-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
   .scope-option {
     background: #fff; border: 1px solid var(--line); border-radius: 18px;
@@ -140,7 +140,7 @@
   .scope-option.chosen .badge { display: inline-block; }
   .scope-note { margin-top: 16px; }
 
-  /* Merkarchitectuur */
+  /* Brand architecture */
   .model-pill {
     display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .06em;
     text-transform: uppercase; color: var(--coral);
@@ -148,7 +148,7 @@
     padding: 5px 14px; margin-bottom: 12px;
   }
 
-  /* Positionering */
+  /* Positioning */
   .audience-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 16px; }
   .audience { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
   .audience h3 { font-size: 15px; margin-bottom: 6px; }
@@ -171,7 +171,7 @@
     letter-spacing: .1em; text-transform: uppercase; margin-right: 10px;
   }
 
-  /* Niet-doelgroep + onliness */
+  /* Non-audience + onliness */
   .notfor { list-style: none; }
   .notfor li {
     font-size: 13.5px; line-height: 1.6; color: var(--muted);
@@ -184,7 +184,7 @@
     font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 19px; line-height: 1.45;
   }
 
-  /* Persoonlijkheid: sliders */
+  /* Personality: sliders */
   .slider-row { margin-bottom: 26px; }
   .slider-row:last-of-type { margin-bottom: 0; }
   .slider-labels { display: flex; justify-content: space-between; margin-bottom: 10px; }
@@ -230,7 +230,7 @@
     border-radius: 0 8px 8px 0; padding: 8px 14px;
   }
 
-  /* Referenties */
+  /* References */
   .ref-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
   .ref-col { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 24px 28px; }
   .ref-col h3 { font-size: 16px; margin-bottom: 14px; }
@@ -240,14 +240,14 @@
   .ref-item b { font-size: 14px; display: block; margin-bottom: 2px; }
   .ref-item span { font-size: 13px; color: var(--muted); line-height: 1.5; }
 
-  /* Vormtaal-kernwoorden */
+  /* Form-language keywords */
   .keyword-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
   .keyword-row span {
     font-size: 12px; font-weight: 700; letter-spacing: .04em;
     background: var(--paper); border: 1px solid var(--line); border-radius: 999px; padding: 6px 16px;
   }
 
-  /* Kleur-richting */
+  /* Colour direction */
   .swatch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 16px; }
   .swatch { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: #fff; }
   .swatch .chip {
@@ -260,7 +260,7 @@
   .swatch .info code { font-size: 11.5px; color: var(--faint); }
   .swatch .info em { display: block; font-style: normal; font-size: 12px; color: var(--muted); margin-top: 2px; }
 
-  /* Top-5 toepassingen */
+  /* Top 5 applications */
   .apps { counter-reset: app; }
   .apps li {
     list-style: none; counter-increment: app;
@@ -274,17 +274,17 @@
     color: var(--coral); flex: none;
   }
 
-  /* Wat nooit verloren mag gaan */
+  /* What may never get lost */
   .anchor-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
   .anchor {
     background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--coral);
     border-radius: 14px; padding: 20px 22px; font-size: 14px; line-height: 1.6;
   }
 
-  /* Open vragen & risico's */
+  /* Open questions & risks */
   .card.risk { border-left: 4px solid var(--ink); font-size: 14px; line-height: 1.6; }
 
-  /* Akkoord */
+  /* Approval */
   .approve {
     background: #fff; border: 2px solid var(--ink); border-radius: 18px; padding: 30px 34px;
     display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-end; justify-content: space-between;
@@ -308,297 +308,297 @@
 <div class="wrap">
 
   <header>
-    <div class="kicker">{{MERKNAAM}} · Rebrand · Fase 0</div>
+    <div class="kicker">{{BRAND_NAME}} · Rebrand · Phase 0</div>
     <h1>Creative brief</h1>
-    <p class="lead">Dit document legt de creatieve koers vast voordat er ook maar een schets wordt gemaakt. Alles wat in fase 1 tot en met 5 wordt ontworpen, wordt hieraan getoetst. Wijzigt een antwoord hieronder, dan wijzigt de brief eerst en het ontwerp daarna.</p>
+    <p class="lead">This document locks in the creative course before a single sketch is made. Everything designed in phases 1 through 5 is tested against it. If an answer below changes, the brief changes first and the design after.</p>
     <div class="meta-row">
-      <span>Datum: {{DATUM}}</span>
-      <span>Opgesteld door: {{OPGESTELD_DOOR}}</span>
-      <span>Status: concept tot akkoord onderaan</span>
+      <span>Date: {{DATE}}</span>
+      <span>Prepared by: {{PREPARED_BY}}</span>
+      <span>Status: draft until the approval at the bottom</span>
     </div>
   </header>
 
   <section>
     <div class="num">01</div>
-    <h2>Aanleiding &amp; ambitie</h2>
-    <p class="intro">Waarom nu, en wat moet het nieuwe merk kunnen dat het huidige niet kan.</p>
+    <h2>Trigger &amp; ambition</h2>
+    <p class="intro">Why now, and what the new brand must do that the current one cannot.</p>
     <div class="stack">
       <div class="card">
-        <div class="label">Aanleiding</div>
-        <p>{{AANLEIDING}}</p>
+        <div class="label">Trigger</div>
+        <p>{{TRIGGER}}</p>
       </div>
       <div class="card">
-        <div class="label">Ambitie</div>
-        <p>{{AMBITIE}}</p>
+        <div class="label">Ambition</div>
+        <p>{{AMBITION}}</p>
       </div>
     </div>
   </section>
 
   <section>
     <div class="num">02</div>
-    <h2>Scope-besluit</h2>
-    <p class="intro">De belangrijkste keuze van het hele traject: verfijnen we wat er is, of beginnen we opnieuw? Elk later ontwerpbesluit volgt uit dit antwoord.</p>
+    <h2>Scope decision</h2>
+    <p class="intro">The most important choice of the whole engagement: do we refine what exists, or start over? Every later design decision follows from this answer.</p>
     <div class="scope-grid">
-      <div class="scope-option {{SCOPE_EVOLUTIE_CLASS}}">
-        <span class="badge">Gekozen</span>
-        <h3>Evolutie</h3>
-        <p>Het bestaande merkteken en woordmerk verfijnen. Zelfde merk-DNA, strakker en consequenter uitgevoerd. Herkenbaarheid blijft volledig intact; bestaande klanten zien een volwassener versie van hetzelfde merk.</p>
+      <div class="scope-option {{SCOPE_EVOLUTION_CLASS}}">
+        <span class="badge">Chosen</span>
+        <h3>Evolution</h3>
+        <p>Refine the existing mark and wordmark. Same brand DNA, executed tighter and more consistently. Recognition stays fully intact; existing clients see a more mature version of the same brand.</p>
       </div>
-      <div class="scope-option {{SCOPE_REVOLUTIE_CLASS}}">
-        <span class="badge">Gekozen</span>
-        <h3>Revolutie</h3>
-        <p>Een nieuw teken en een nieuwe visuele taal. Het merk-DNA wordt opnieuw vertaald in plaats van bijgeschaafd. Grotere sprong, groter risico, en de enige route als de huidige identiteit het verhaal niet meer kan dragen.</p>
+      <div class="scope-option {{SCOPE_REVOLUTION_CLASS}}">
+        <span class="badge">Chosen</span>
+        <h3>Revolution</h3>
+        <p>A new mark and a new visual language. The brand DNA is translated afresh rather than polished. A bigger leap, a bigger risk, and the only route when the current identity can no longer carry the story.</p>
       </div>
     </div>
     <div class="card scope-note">
-      <div class="label">Waarom deze keuze</div>
-      <p>{{SCOPE_TOELICHTING}}</p>
+      <div class="label">Why this choice</div>
+      <p>{{SCOPE_RATIONALE}}</p>
     </div>
   </section>
 
   <section>
     <div class="num">03</div>
-    <h2>Merkarchitectuur</h2>
-    <p class="intro">Hoe dit merk zich verhoudt tot de andere merken in het portfolio, zodat het nieuwe ontwerp de juiste afstand of verwantschap krijgt.</p>
+    <h2>Brand architecture</h2>
+    <p class="intro">How this brand relates to the other brands in the portfolio, so the new design gets the right distance or kinship.</p>
     <div class="card">
-      <span class="model-pill">{{ARCHITECTUUR_MODEL}}</span>
-      <p>{{MERKARCHITECTUUR}}</p>
+      <span class="model-pill">{{ARCHITECTURE_MODEL}}</span>
+      <p>{{BRAND_ARCHITECTURE}}</p>
     </div>
   </section>
 
   <section>
     <div class="num">04</div>
-    <h2>Positionering</h2>
-    <p class="intro">Voor wie het merk werkt, voor wie uitdrukkelijk niet, de zin die alleen dit merk kan afmaken, en wat de doelgroep in de eerste drie seconden moet voelen: en nooit mag voelen.</p>
+    <h2>Positioning</h2>
+    <p class="intro">Who the brand works for, who it explicitly does not, the sentence only this brand can complete, and what the audience must feel in the first three seconds: and may never feel.</p>
     <div class="audience-grid">
       <div class="audience">
-        <h3>{{DOELGROEP_1_NAAM}}</h3>
-        <p>{{DOELGROEP_1_CONTEXT}}</p>
+        <h3>{{AUDIENCE_1_NAME}}</h3>
+        <p>{{AUDIENCE_1_CONTEXT}}</p>
       </div>
       <div class="audience">
-        <h3>{{DOELGROEP_2_NAAM}}</h3>
-        <p>{{DOELGROEP_2_CONTEXT}}</p>
+        <h3>{{AUDIENCE_2_NAME}}</h3>
+        <p>{{AUDIENCE_2_CONTEXT}}</p>
       </div>
       <div class="audience">
-        <h3>{{DOELGROEP_3_NAAM}}</h3>
-        <p>{{DOELGROEP_3_CONTEXT}}</p>
+        <h3>{{AUDIENCE_3_NAME}}</h3>
+        <p>{{AUDIENCE_3_CONTEXT}}</p>
       </div>
     </div>
     <div class="card" style="margin-bottom:16px;">
-      <div class="label" style="color:var(--coral);">Niet-doelgroep</div>
-      <p>Voor wie dit merk bewust niet werkt. Een ontwerp dat deze groep aanspreekt, mist zijn doel:</p>
+      <div class="label" style="color:var(--coral);">Non-audience</div>
+      <p>Who this brand deliberately does not serve. A design that appeals to this group misses its target:</p>
       <ul class="notfor" style="margin-top:10px;">
-        <li>{{NIET_DOELGROEP_1}}</li>
-        <li>{{NIET_DOELGROEP_2}}</li>
-        <li>{{NIET_DOELGROEP_3}}</li>
+        <li>{{NON_AUDIENCE_1}}</li>
+        <li>{{NON_AUDIENCE_2}}</li>
+        <li>{{NON_AUDIENCE_3}}</li>
       </ul>
     </div>
     <div class="card onliness" style="margin-bottom:16px;">
-      <div class="label">Onliness-statement</div>
+      <div class="label">Onliness statement</div>
       <p class="statement">{{ONLINESS_STATEMENT}}</p>
-      <p style="margin-top:10px; font-size:12.5px; color:var(--faint);">E&eacute;n zin, in de vorm "wij zijn de enige ___ die ___". Staat deze zin nog niet, dan hoort dat als risico in de sectie Open vragen &amp; risico's, en gaat positioneringswerk v&oacute;&oacute;r ontwerpwerk.</p>
+      <p style="margin-top:10px; font-size:12.5px; color:var(--faint);">One sentence, in the form "we are the only ___ that ___". If this sentence does not stand yet, it belongs as a risk in the Open questions &amp; risks section, and positioning work comes before design work.</p>
     </div>
     <div class="feel">
-      <div class="label">Het 3-seconden-gevoel</div>
-      <blockquote>{{DRIE_SECONDEN_GEVOEL}}</blockquote>
-      <div class="never"><b>Nooit:</b>{{NOOIT_GEVOEL}}</div>
+      <div class="label">The 3-second feeling</div>
+      <blockquote>{{THREE_SECOND_FEELING}}</blockquote>
+      <div class="never"><b>Never:</b>{{NEVER_FEELING}}</div>
     </div>
   </section>
 
   <section>
     <div class="num">05</div>
-    <h2>Persoonlijkheid</h2>
-    <p class="intro">Zeven assen, elk een spanning waar het merk positie op kiest. Per as staan drie posities: waar het merk moet komen (coral), waar het nu staat (open ring, vraag 2.5) en waar de belangrijkste concurrent staat (grijze ruit, vraag 2.6). Waar coral en ring uit elkaar liggen, ligt de ontwerpopdracht; die staat als zin onder de as. Valt coral samen met de ruit, dan is de positionering een me-too en moet fase 1 open ruimte vinden.</p>
+    <h2>Personality</h2>
+    <p class="intro">Seven axes, each a tension the brand takes a position on. Each axis shows three positions: where the brand must go (coral), where it stands now (open ring, question 2.5) and where the main competitor stands (grey diamond, question 2.6). Where coral and ring sit apart lies the design assignment; it stands as a sentence below the axis. If coral coincides with the diamond, the positioning is a me-too and phase 1 must find open space.</p>
     <div class="card">
       <div class="slider-legend">
-        <span><i class="l-gewenst"></i>Gewenst</span>
-        <span><i class="l-huidig"></i>Huidig</span>
-        <span><i class="l-concurrent"></i>Concurrent</span>
+        <span><i class="l-gewenst"></i>Desired</span>
+        <span><i class="l-huidig"></i>Current</span>
+        <span><i class="l-concurrent"></i>Competitor</span>
       </div>
       <div class="slider-row">
-        <div class="slider-labels"><b>Speels</b><b>Gezaghebbend</b></div>
+        <div class="slider-labels"><b>Playful</b><b>Authoritative</b></div>
         <div class="slider-track">
           <span class="tick" style="left:25%"></span>
           <span class="tick" style="left:50%"></span>
           <span class="tick" style="left:75%"></span>
-          <span class="marker concurrent" style="left:{{SLIDER_S1_CONCURRENT_PCT}}%"></span>
-          <span class="marker huidig" style="left:{{SLIDER_S1_HUIDIG_PCT}}%"></span>
-          <span class="marker" style="left:{{SLIDER_S1_GEWENST_PCT}}%"></span>
+          <span class="marker concurrent" style="left:{{SLIDER_S1_COMPETITOR_PCT}}%"></span>
+          <span class="marker huidig" style="left:{{SLIDER_S1_CURRENT_PCT}}%"></span>
+          <span class="marker" style="left:{{SLIDER_S1_DESIRED_PCT}}%"></span>
         </div>
-        <div class="slider-value">Gewenst {{SLIDER_S1_GEWENST_PCT}} · Huidig {{SLIDER_S1_HUIDIG_PCT}} · Concurrent {{SLIDER_S1_CONCURRENT_PCT}} (0 = speels, 100 = gezaghebbend)</div>
+        <div class="slider-value">Desired {{SLIDER_S1_DESIRED_PCT}} · Current {{SLIDER_S1_CURRENT_PCT}} · Competitor {{SLIDER_S1_COMPETITOR_PCT}} (0 = playful, 100 = authoritative)</div>
         <div class="slider-gap">{{SLIDER_S1_GAP}}</div>
       </div>
       <div class="slider-row">
-        <div class="slider-labels"><b>Warm</b><b>Technisch</b></div>
+        <div class="slider-labels"><b>Warm</b><b>Technical</b></div>
         <div class="slider-track">
           <span class="tick" style="left:25%"></span>
           <span class="tick" style="left:50%"></span>
           <span class="tick" style="left:75%"></span>
-          <span class="marker concurrent" style="left:{{SLIDER_S2_CONCURRENT_PCT}}%"></span>
-          <span class="marker huidig" style="left:{{SLIDER_S2_HUIDIG_PCT}}%"></span>
-          <span class="marker" style="left:{{SLIDER_S2_GEWENST_PCT}}%"></span>
+          <span class="marker concurrent" style="left:{{SLIDER_S2_COMPETITOR_PCT}}%"></span>
+          <span class="marker huidig" style="left:{{SLIDER_S2_CURRENT_PCT}}%"></span>
+          <span class="marker" style="left:{{SLIDER_S2_DESIRED_PCT}}%"></span>
         </div>
-        <div class="slider-value">Gewenst {{SLIDER_S2_GEWENST_PCT}} · Huidig {{SLIDER_S2_HUIDIG_PCT}} · Concurrent {{SLIDER_S2_CONCURRENT_PCT}} (0 = warm, 100 = technisch)</div>
+        <div class="slider-value">Desired {{SLIDER_S2_DESIRED_PCT}} · Current {{SLIDER_S2_CURRENT_PCT}} · Competitor {{SLIDER_S2_COMPETITOR_PCT}} (0 = warm, 100 = technical)</div>
         <div class="slider-gap">{{SLIDER_S2_GAP}}</div>
       </div>
       <div class="slider-row">
-        <div class="slider-labels"><b>Pionier</b><b>Betrouwbaar</b></div>
+        <div class="slider-labels"><b>Pioneer</b><b>Trustworthy</b></div>
         <div class="slider-track">
           <span class="tick" style="left:25%"></span>
           <span class="tick" style="left:50%"></span>
           <span class="tick" style="left:75%"></span>
-          <span class="marker concurrent" style="left:{{SLIDER_S3_CONCURRENT_PCT}}%"></span>
-          <span class="marker huidig" style="left:{{SLIDER_S3_HUIDIG_PCT}}%"></span>
-          <span class="marker" style="left:{{SLIDER_S3_GEWENST_PCT}}%"></span>
+          <span class="marker concurrent" style="left:{{SLIDER_S3_COMPETITOR_PCT}}%"></span>
+          <span class="marker huidig" style="left:{{SLIDER_S3_CURRENT_PCT}}%"></span>
+          <span class="marker" style="left:{{SLIDER_S3_DESIRED_PCT}}%"></span>
         </div>
-        <div class="slider-value">Gewenst {{SLIDER_S3_GEWENST_PCT}} · Huidig {{SLIDER_S3_HUIDIG_PCT}} · Concurrent {{SLIDER_S3_CONCURRENT_PCT}} (0 = pionier, 100 = betrouwbaar)</div>
+        <div class="slider-value">Desired {{SLIDER_S3_DESIRED_PCT}} · Current {{SLIDER_S3_CURRENT_PCT}} · Competitor {{SLIDER_S3_COMPETITOR_PCT}} (0 = pioneer, 100 = trustworthy)</div>
         <div class="slider-gap">{{SLIDER_S3_GAP}}</div>
       </div>
       <div class="slider-row">
-        <div class="slider-labels"><b>Toegankelijk</b><b>Exclusief</b></div>
+        <div class="slider-labels"><b>Accessible</b><b>Exclusive</b></div>
         <div class="slider-track">
           <span class="tick" style="left:25%"></span>
           <span class="tick" style="left:50%"></span>
           <span class="tick" style="left:75%"></span>
-          <span class="marker concurrent" style="left:{{SLIDER_S4_CONCURRENT_PCT}}%"></span>
-          <span class="marker huidig" style="left:{{SLIDER_S4_HUIDIG_PCT}}%"></span>
-          <span class="marker" style="left:{{SLIDER_S4_GEWENST_PCT}}%"></span>
+          <span class="marker concurrent" style="left:{{SLIDER_S4_COMPETITOR_PCT}}%"></span>
+          <span class="marker huidig" style="left:{{SLIDER_S4_CURRENT_PCT}}%"></span>
+          <span class="marker" style="left:{{SLIDER_S4_DESIRED_PCT}}%"></span>
         </div>
-        <div class="slider-value">Gewenst {{SLIDER_S4_GEWENST_PCT}} · Huidig {{SLIDER_S4_HUIDIG_PCT}} · Concurrent {{SLIDER_S4_CONCURRENT_PCT}} (0 = toegankelijk, 100 = exclusief)</div>
+        <div class="slider-value">Desired {{SLIDER_S4_DESIRED_PCT}} · Current {{SLIDER_S4_CURRENT_PCT}} · Competitor {{SLIDER_S4_COMPETITOR_PCT}} (0 = accessible, 100 = exclusive)</div>
         <div class="slider-gap">{{SLIDER_S4_GAP}}</div>
       </div>
       <div class="slider-row">
-        <div class="slider-labels"><b>Uitgesproken</b><b>Ingetogen</b></div>
+        <div class="slider-labels"><b>Outspoken</b><b>Understated</b></div>
         <div class="slider-track">
           <span class="tick" style="left:25%"></span>
           <span class="tick" style="left:50%"></span>
           <span class="tick" style="left:75%"></span>
-          <span class="marker concurrent" style="left:{{SLIDER_S5_CONCURRENT_PCT}}%"></span>
-          <span class="marker huidig" style="left:{{SLIDER_S5_HUIDIG_PCT}}%"></span>
-          <span class="marker" style="left:{{SLIDER_S5_GEWENST_PCT}}%"></span>
+          <span class="marker concurrent" style="left:{{SLIDER_S5_COMPETITOR_PCT}}%"></span>
+          <span class="marker huidig" style="left:{{SLIDER_S5_CURRENT_PCT}}%"></span>
+          <span class="marker" style="left:{{SLIDER_S5_DESIRED_PCT}}%"></span>
         </div>
-        <div class="slider-value">Gewenst {{SLIDER_S5_GEWENST_PCT}} · Huidig {{SLIDER_S5_HUIDIG_PCT}} · Concurrent {{SLIDER_S5_CONCURRENT_PCT}} (0 = uitgesproken, 100 = ingetogen)</div>
+        <div class="slider-value">Desired {{SLIDER_S5_DESIRED_PCT}} · Current {{SLIDER_S5_CURRENT_PCT}} · Competitor {{SLIDER_S5_COMPETITOR_PCT}} (0 = outspoken, 100 = understated)</div>
         <div class="slider-gap">{{SLIDER_S5_GAP}}</div>
       </div>
       <div class="slider-row">
-        <div class="slider-labels"><b>Minimalistisch</b><b>Rijk aan detail</b></div>
+        <div class="slider-labels"><b>Minimalist</b><b>Rich in detail</b></div>
         <div class="slider-track">
           <span class="tick" style="left:25%"></span>
           <span class="tick" style="left:50%"></span>
           <span class="tick" style="left:75%"></span>
-          <span class="marker concurrent" style="left:{{SLIDER_S6_CONCURRENT_PCT}}%"></span>
-          <span class="marker huidig" style="left:{{SLIDER_S6_HUIDIG_PCT}}%"></span>
-          <span class="marker" style="left:{{SLIDER_S6_GEWENST_PCT}}%"></span>
+          <span class="marker concurrent" style="left:{{SLIDER_S6_COMPETITOR_PCT}}%"></span>
+          <span class="marker huidig" style="left:{{SLIDER_S6_CURRENT_PCT}}%"></span>
+          <span class="marker" style="left:{{SLIDER_S6_DESIRED_PCT}}%"></span>
         </div>
-        <div class="slider-value">Gewenst {{SLIDER_S6_GEWENST_PCT}} · Huidig {{SLIDER_S6_HUIDIG_PCT}} · Concurrent {{SLIDER_S6_CONCURRENT_PCT}} (0 = minimalistisch, 100 = rijk aan detail)</div>
+        <div class="slider-value">Desired {{SLIDER_S6_DESIRED_PCT}} · Current {{SLIDER_S6_CURRENT_PCT}} · Competitor {{SLIDER_S6_COMPETITOR_PCT}} (0 = minimalist, 100 = rich in detail)</div>
         <div class="slider-gap">{{SLIDER_S6_GAP}}</div>
       </div>
       <div class="slider-row">
-        <div class="slider-labels"><b>Eigenzinnig</b><b>Mainstream</b></div>
+        <div class="slider-labels"><b>Unconventional</b><b>Mainstream</b></div>
         <div class="slider-track">
           <span class="tick" style="left:25%"></span>
           <span class="tick" style="left:50%"></span>
           <span class="tick" style="left:75%"></span>
-          <span class="marker concurrent" style="left:{{SLIDER_S7_CONCURRENT_PCT}}%"></span>
-          <span class="marker huidig" style="left:{{SLIDER_S7_HUIDIG_PCT}}%"></span>
-          <span class="marker" style="left:{{SLIDER_S7_GEWENST_PCT}}%"></span>
+          <span class="marker concurrent" style="left:{{SLIDER_S7_COMPETITOR_PCT}}%"></span>
+          <span class="marker huidig" style="left:{{SLIDER_S7_CURRENT_PCT}}%"></span>
+          <span class="marker" style="left:{{SLIDER_S7_DESIRED_PCT}}%"></span>
         </div>
-        <div class="slider-value">Gewenst {{SLIDER_S7_GEWENST_PCT}} · Huidig {{SLIDER_S7_HUIDIG_PCT}} · Concurrent {{SLIDER_S7_CONCURRENT_PCT}} (0 = eigenzinnig, 100 = mainstream)</div>
+        <div class="slider-value">Desired {{SLIDER_S7_DESIRED_PCT}} · Current {{SLIDER_S7_CURRENT_PCT}} · Competitor {{SLIDER_S7_COMPETITOR_PCT}} (0 = unconventional, 100 = mainstream)</div>
         <div class="slider-gap">{{SLIDER_S7_GAP}}</div>
       </div>
     </div>
     <div class="card" style="margin-top:16px;">
-      <div class="label">Wat dit samen betekent</div>
-      <p>{{PERSOONLIJKHEID_TOELICHTING}}</p>
+      <div class="label">What this means together</div>
+      <p>{{PERSONALITY_SUMMARY}}</p>
     </div>
   </section>
 
   <section>
     <div class="num">06</div>
-    <h2>Bewonderde merken &amp; anti-referenties</h2>
-    <p class="intro">Referenties zijn geen stijlen om te kopiëren maar ankers voor smaak: wat het merk mag lenen, en waar het expliciet van wegblijft.</p>
+    <h2>Admired brands &amp; anti-references</h2>
+    <p class="intro">References are not styles to copy but anchors for taste: what the brand may borrow, and what it explicitly stays away from.</p>
     <div class="ref-grid">
       <div class="ref-col">
-        <h3>Bewonderd, en waarom</h3>
-        <div class="ref-item"><b>{{BEWONDERD_1_MERK}}</b><span>{{BEWONDERD_1_WAAROM}}</span></div>
-        <div class="ref-item"><b>{{BEWONDERD_2_MERK}}</b><span>{{BEWONDERD_2_WAAROM}}</span></div>
-        <div class="ref-item"><b>{{BEWONDERD_3_MERK}}</b><span>{{BEWONDERD_3_WAAROM}}</span></div>
+        <h3>Admired, and why</h3>
+        <div class="ref-item"><b>{{ADMIRED_1_BRAND}}</b><span>{{ADMIRED_1_WHY}}</span></div>
+        <div class="ref-item"><b>{{ADMIRED_2_BRAND}}</b><span>{{ADMIRED_2_WHY}}</span></div>
+        <div class="ref-item"><b>{{ADMIRED_3_BRAND}}</b><span>{{ADMIRED_3_WHY}}</span></div>
       </div>
       <div class="ref-col anti">
-        <h3>Nooit dit, en waarom niet</h3>
-        <div class="ref-item"><b>{{ANTI_1_MERK}}</b><span>{{ANTI_1_WAAROM}}</span></div>
-        <div class="ref-item"><b>{{ANTI_2_MERK}}</b><span>{{ANTI_2_WAAROM}}</span></div>
-        <div class="ref-item"><b>{{ANTI_3_MERK}}</b><span>{{ANTI_3_WAAROM}}</span></div>
+        <h3>Never this, and why not</h3>
+        <div class="ref-item"><b>{{ANTI_1_BRAND}}</b><span>{{ANTI_1_WHY}}</span></div>
+        <div class="ref-item"><b>{{ANTI_2_BRAND}}</b><span>{{ANTI_2_WHY}}</span></div>
+        <div class="ref-item"><b>{{ANTI_3_BRAND}}</b><span>{{ANTI_3_WHY}}</span></div>
       </div>
     </div>
   </section>
 
   <section>
     <div class="num">07</div>
-    <h2>Beeldmerk-richting</h2>
-    <p class="intro">De vormtaal waarbinnen fase 3 gaat ontwerpen. Richtingen buiten deze kaders komen alleen terug op tafel als deze brief eerst wordt herzien.</p>
+    <h2>Mark direction</h2>
+    <p class="intro">The form language phase 3 will design within. Directions outside these boundaries only come back on the table after this brief is revised first.</p>
     <div class="card">
-      <p>{{BEELDMERK_RICHTING}}</p>
+      <p>{{MARK_DIRECTION}}</p>
       <div class="keyword-row">
-        <span>{{VORM_KERNWOORD_1}}</span>
-        <span>{{VORM_KERNWOORD_2}}</span>
-        <span>{{VORM_KERNWOORD_3}}</span>
+        <span>{{FORM_KEYWORD_1}}</span>
+        <span>{{FORM_KEYWORD_2}}</span>
+        <span>{{FORM_KEYWORD_3}}</span>
       </div>
     </div>
   </section>
 
   <section>
     <div class="num">08</div>
-    <h2>Woordmerk &amp; kleur</h2>
-    <p class="intro">De behandeling van de naam zelf, en de kleurrichting waarbinnen het palet in fase 3 wordt uitgewerkt.</p>
+    <h2>Wordmark &amp; colour</h2>
+    <p class="intro">The treatment of the name itself, and the colour direction within which the palette is developed in phase 3.</p>
     <div class="card">
-      <div class="label">Woordmerk</div>
-      <p>{{WOORDMERK_RICHTING}}</p>
+      <div class="label">Wordmark</div>
+      <p>{{WORDMARK_DIRECTION}}</p>
     </div>
     <div class="swatch-grid">
       <div class="swatch">
-        <div class="chip" style="background:{{KLEUR_1_HEX}}"></div>
-        <div class="info"><b>{{KLEUR_1_NAAM}}</b><code>{{KLEUR_1_HEX}}</code><em>{{KLEUR_1_ROL}}</em></div>
+        <div class="chip" style="background:{{COLOR_1_HEX}}"></div>
+        <div class="info"><b>{{COLOR_1_NAME}}</b><code>{{COLOR_1_HEX}}</code><em>{{COLOR_1_ROLE}}</em></div>
       </div>
       <div class="swatch">
-        <div class="chip" style="background:{{KLEUR_2_HEX}}"></div>
-        <div class="info"><b>{{KLEUR_2_NAAM}}</b><code>{{KLEUR_2_HEX}}</code><em>{{KLEUR_2_ROL}}</em></div>
+        <div class="chip" style="background:{{COLOR_2_HEX}}"></div>
+        <div class="info"><b>{{COLOR_2_NAME}}</b><code>{{COLOR_2_HEX}}</code><em>{{COLOR_2_ROLE}}</em></div>
       </div>
       <div class="swatch">
-        <div class="chip" style="background:{{KLEUR_3_HEX}}"></div>
-        <div class="info"><b>{{KLEUR_3_NAAM}}</b><code>{{KLEUR_3_HEX}}</code><em>{{KLEUR_3_ROL}}</em></div>
+        <div class="chip" style="background:{{COLOR_3_HEX}}"></div>
+        <div class="info"><b>{{COLOR_3_NAME}}</b><code>{{COLOR_3_HEX}}</code><em>{{COLOR_3_ROLE}}</em></div>
       </div>
     </div>
   </section>
 
   <section>
     <div class="num">09</div>
-    <h2>Top-5 toepassingen</h2>
-    <p class="intro">De vijf plekken waar het merk het eerst en het hardst moet werken, in volgorde van belang. Elk ontwerp uit fase 3 wordt op nummer 1 en 2 getest voordat het op een reviewpagina komt.</p>
+    <h2>Top 5 applications</h2>
+    <p class="intro">The five places where the brand must work first and hardest, in order of importance. Every phase 3 design is tested on numbers 1 and 2 before it reaches a review page.</p>
     <ol class="apps">
-      <li>{{TOEPASSING_1}}</li>
-      <li>{{TOEPASSING_2}}</li>
-      <li>{{TOEPASSING_3}}</li>
-      <li>{{TOEPASSING_4}}</li>
-      <li>{{TOEPASSING_5}}</li>
+      <li>{{APPLICATION_1}}</li>
+      <li>{{APPLICATION_2}}</li>
+      <li>{{APPLICATION_3}}</li>
+      <li>{{APPLICATION_4}}</li>
+      <li>{{APPLICATION_5}}</li>
     </ol>
   </section>
 
   <section>
     <div class="num">10</div>
-    <h2>Wat nooit verloren mag gaan</h2>
-    <p class="intro">De harde ondergrens. Een ontwerp dat een van deze drie ankers kwijtraakt, is per definitie afgekeurd, hoe mooi het ook is.</p>
+    <h2>What may never get lost</h2>
+    <p class="intro">The hard floor. A design that loses any of these three anchors is rejected by definition, however beautiful it is.</p>
     <div class="anchor-grid">
-      <div class="anchor">{{BEHOUD_1}}</div>
-      <div class="anchor">{{BEHOUD_2}}</div>
-      <div class="anchor">{{BEHOUD_3}}</div>
+      <div class="anchor">{{PRESERVE_1}}</div>
+      <div class="anchor">{{PRESERVE_2}}</div>
+      <div class="anchor">{{PRESERVE_3}}</div>
     </div>
   </section>
 
   <section>
     <div class="num">11</div>
     <h2>Do's &amp; don'ts</h2>
-    <p class="intro">Alle guardrails uit de discovery, gedestilleerd tot regels waar je een ontwerp letterlijk langs legt. Elke regel is met ja of nee te toetsen; "voelt goed" telt niet als antwoord.</p>
+    <p class="intro">All the guardrails from the discovery, distilled into rules you literally hold a design against. Every rule can be tested with yes or no; "feels right" does not count as an answer.</p>
     <div class="ref-grid">
       <div class="ref-col">
         <h3>Do</h3>
@@ -619,35 +619,35 @@
 
   <section>
     <div class="num">12</div>
-    <h2>Open vragen &amp; risico's</h2>
-    <p class="intro">Wat de discovery niet heeft opgelost, staat hier hardop: tegenstrijdige antwoorden, een onliness-zin die nog niet staat, geparkeerde punten. Niets hiervan wordt in de bodytekst gladgestreken; alles wat hier staat, komt bij de fase 3-gate opnieuw op tafel. Ook elke claim die niet naar een regel in het discovery-log herleidt, hoort hier en nergens anders.</p>
+    <h2>Open questions &amp; risks</h2>
+    <p class="intro">What the discovery did not resolve is stated out loud here: contradictory answers, an onliness sentence that does not stand yet, parked points. None of this gets smoothed into the body text; everything here comes back on the table at the phase 3 gate. Any claim that does not trace back to a line in the discovery log also belongs here and nowhere else.</p>
     <div class="stack">
-      <div class="card risk">{{OPEN_VRAAG_1}}</div>
-      <div class="card risk">{{OPEN_VRAAG_2}}</div>
-      <div class="card risk">{{OPEN_VRAAG_3}}</div>
+      <div class="card risk">{{OPEN_QUESTION_1}}</div>
+      <div class="card risk">{{OPEN_QUESTION_2}}</div>
+      <div class="card risk">{{OPEN_QUESTION_3}}</div>
     </div>
   </section>
 
   <section>
     <div class="num">13</div>
-    <h2>Akkoord</h2>
-    <p class="intro">Vanaf dit akkoord is de brief het toetskader. Latere twijfel gaat eerst terug naar de brief, niet rechtstreeks naar het ontwerp.</p>
+    <h2>Approval</h2>
+    <p class="intro">From this approval onward, the brief is the testing frame. Later doubt goes back to the brief first, not straight to the design.</p>
     <div class="approve">
       <div class="decision">
-        <div class="label" style="font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--faint); font-weight:700; margin-bottom:6px;">Besluit</div>
-        <p>{{AKKOORD_BESLUIT}}</p>
+        <div class="label" style="font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--faint); font-weight:700; margin-bottom:6px;">Decision</div>
+        <p>{{APPROVAL_DECISION}}</p>
       </div>
       <div class="sign">
-        Naam: <b>{{AKKOORD_NAAM}}</b><br>
-        Datum: <b>{{AKKOORD_DATUM}}</b>
+        Name: <b>{{APPROVAL_NAME}}</b><br>
+        Date: <b>{{APPROVAL_DATE}}</b>
       </div>
     </div>
   </section>
 
   <footer>
-    <p>Template: <code>brain/skills/rebrand/assets/brief_template.html</code> · gevuld aan het einde van fase 0 van het /rebrand-traject.<br>
-    Bijlage: het letterlijke discovery-log (<code>discovery_log.md</code>, zelfde projectmap) hoort onlosmakelijk bij deze brief. Elke claim hierboven herleidt naar een regel daarin.<br>
-    Wijzigingen na akkoord: nieuwe versie van dit bestand naast het origineel, nooit overschrijven.</p>
+    <p>Template: <code>brain/skills/rebrand/assets/brief_template.html</code> · filled at the end of phase 0 of the /rebrand engagement.<br>
+    Appendix: the verbatim discovery log (<code>discovery_log.md</code>, same project folder) is inseparable from this brief. Every claim above traces back to a line in it.<br>
+    Changes after approval: a new version of this file next to the original, never overwrite.</p>
   </footer>
 
 </div>
