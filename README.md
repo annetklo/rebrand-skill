@@ -34,7 +34,7 @@ Each phase ends in a gate page the client reviews and annotates. Open the gate p
 Clone this repository into your Claude Code skills directory:
 
 ```
-git clone <this-repo> .claude/skills/rebrand
+git clone https://github.com/annetklo/rebrand-skill .claude/skills/rebrand
 ```
 
 or, once published to a skills registry:
